@@ -2,135 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>AI Domain Portfolio | Premium Strategic Assets</title>
-  <meta name="description" content="A curated, privately held collection of high-value AI domain assets — strategically positioned across the full stack of next-generation intelligence."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium AI Domain Portfolio</title>
+  <meta name="description" content="Curated high-value AI domain assets at the intersection of control, governance, execution, planning, and vertical intelligence." />
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0a0e1a;
-      --card: rgba(17,24,39,0.65);
-      --border: rgba(96,165,250,0.18);
-      --borderHover: rgba(96,165,250,0.45);
-      --text: #f1f5f9;
+      --bg: #080c17;
+      --card: rgba(17,24,39,0.55);
+      --border: rgba(96,165,250,0.22);
+      --borderHover: rgba(96,165,250,0.5);
+      --text: #f8fafc;
       --muted: #94a3b8;
-      --brand: #60a5fa;
-      --glow: rgba(96,165,250,0.35);
-      --radius: 20px;
+      --accent: #60a5fa;
+      --glow: rgba(96,165,250,0.4);
+      --radius: 24px;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: 
-        linear-gradient(rgba(10,14,26,0.78), rgba(0,0,0,0.88)),
-        url('https://your-hosted-premium-neural-url.jpg') center/cover no-repeat fixed;  /* ← Replace with one of the new images above */
+        linear-gradient(rgba(8,12,23,0.78), rgba(0,0,0,0.88)),
+        url('https://your-hosted-neural-purple-background.jpg') center/cover no-repeat fixed; /* ← Paste one of the images above here */
       background-blend-mode: multiply;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       min-height: 100dvh;
     }
-    .container { max-width: 1200px; margin: 0 auto; padding: clamp(60px, 8vw, 120px) 24px; }
-    header { text-align: center; padding-bottom: 5rem; }
+    .container { max-width: 1240px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) 32px; }
+    header { text-align: center; padding-bottom: 6rem; }
     h1 {
-      font-size: clamp(3.5rem, 9vw, 6rem);
-      font-weight: 800;
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 900;
       background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.2rem;
     }
     .tagline {
-      font-size: clamp(1.3rem, 4.5vw, 1.6rem);
-      color: #cbd5e1;
-      max-width: 900px;
-      margin: 0 auto 2.5rem;
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
+      color: #d1d5db;
+      max-width: 920px;
+      margin: 0 auto 3rem;
       font-weight: 300;
+      opacity: 0.95;
     }
     .pillRow {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       justify-content: center;
-      margin: 2rem 0 5rem;
+      margin: 2.5rem 0 6rem;
     }
     .pill {
-      padding: 0.6rem 1.3rem;
-      border: 1px solid rgba(96,165,250,0.25);
+      padding: 0.7rem 1.4rem;
+      border: 1px solid rgba(96,165,250,0.3);
       border-radius: 999px;
-      background: rgba(96,165,250,0.1);
-      color: #93c5fd;
-      font-size: 0.85rem;
+      background: rgba(96,165,250,0.12);
+      color: #a5d8ff;
+      font-size: 0.9rem;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
     }
     .card {
       background: var(--card);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2.4rem;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+      padding: 2.6rem;
+      transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
     }
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-12px);
       border-color: var(--borderHover);
-      box-shadow: 0 20px 70px var(--glow);
+      box-shadow: 0 24px 80px var(--glow);
     }
     .domain {
-      font-size: clamp(1.6rem, 4.5vw, 2rem);
-      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      font-weight: 800;
       color: #e0f2fe;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.7rem;
     }
     .role {
-      font-size: 0.9rem;
-      color: #93c5fd;
+      font-size: 0.95rem;
+      color: #a5d8ff;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
     }
     .cta {
-      margin-top: 7rem;
-      padding: 4rem;
-      border-radius: 24px;
-      background: rgba(17,24,39,0.75);
-      backdrop-filter: blur(20px);
+      margin-top: 8rem;
+      padding: 4.5rem;
+      border-radius: 28px;
+      background: rgba(17,24,39,0.7);
+      backdrop-filter: blur(24px);
       border: 1px solid var(--border);
       text-align: center;
     }
     .btn {
-      padding: 1.1rem 3rem;
+      padding: 1.2rem 3.5rem;
       background: linear-gradient(135deg, #2563eb, #60a5fa, #a5b4fc);
       color: white;
-      font-weight: 700;
-      font-size: 1.15rem;
+      font-weight: 800;
+      font-size: 1.25rem;
       border-radius: 999px;
       text-decoration: none;
-      transition: all 0.35s ease;
-      box-shadow: 0 6px 24px rgba(37,99,235,0.35);
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.4);
     }
-    .btn:hover { transform: translateY(-4px); box-shadow: 0 16px 60px rgba(96,165,250,0.6); }
+    .btn:hover { transform: translateY(-5px); box-shadow: 0 20px 80px rgba(96,165,250,0.7); }
     footer {
-      margin-top: 7rem;
+      margin-top: 8rem;
       text-align: center;
       color: #64748b;
-      font-size: 0.95rem;
-      padding-bottom: 4rem;
+      font-size: 1rem;
+      padding-bottom: 5rem;
     }
     @media (max-width: 768px) {
-      .container { padding: 60px 20px; }
-      h1 { font-size: 4rem; }
-      .cta { padding: 3rem; }
+      .container { padding: 80px 24px; }
+      h1 { font-size: 4.8rem; }
+      .cta { padding: 3.5rem; }
     }
   </style>
 </head>
@@ -140,7 +142,7 @@
     <header>
       <h1>AI Domain Portfolio</h1>
       <p class="tagline">
-        Privately held, high-value AI assets — engineered for the next era of intelligence infrastructure.
+        Privately held, ultra-premium AI infrastructure assets — engineered for the future of intelligent systems.
       </p>
       <div class="pillRow">
         <div class="pill">Control</div>
@@ -152,26 +154,54 @@
     </header>
 
     <div class="grid">
-      <!-- Cards remain the same as before, but now they pop against the new background -->
       <div class="card">
         <div class="domain">CommandAI.ai</div>
         <div class="role">Control / Orchestration Layer</div>
-        <p>Central command infrastructure for orchestrating complex AI agents, workflows, and mission-critical autonomous systems at enterprise scale.</p>
+        <p>Enterprise-grade command center for AI agent orchestration, mission-critical workflows, and autonomous system coordination.</p>
       </div>
-      <!-- ... add the other cards here (BoardAI.ai, MotionAI.ai, etc.) ... -->
+
+      <div class="card">
+        <div class="domain">BoardAI.ai</div>
+        <div class="role">Governance / Decision Intelligence</div>
+        <p>Executive-grade AI governance platform delivering real-time boardroom insights, risk mitigation, and strategic decision augmentation.</p>
+      </div>
+
+      <div class="card">
+        <div class="domain">MotionAI.ai</div>
+        <div class="role">Execution / Automation</div>
+        <p>High-velocity execution layer powering robotics, logistics, real-time simulation, and physical-world intelligent automation.</p>
+      </div>
+
+      <div class="card">
+        <div class="domain">TravelAir.ai</div>
+        <div class="role">Vertical Intelligence — Travel</div>
+        <p>Next-generation travel intelligence platform for predictive personalization, dynamic optimization, and luxury experience orchestration.</p>
+      </div>
+
+      <div class="card">
+        <div class="domain">TripLogic.ai</div>
+        <div class="role">Planning / Optimization</div>
+        <p>Precision trip planning & multi-objective optimization engine — designed for seamless integration into global travel ecosystems.</p>
+      </div>
+
+      <div class="card">
+        <div class="domain">HospitalityAI.ai</div>
+        <div class="role">Vertical Intelligence — Hospitality</div>
+        <p>Comprehensive AI platform for hospitality: guest experience personalization, operational intelligence, and next-gen revenue optimization.</p>
+      </div>
     </div>
 
     <div class="cta">
-      <h2>Strategic Acquisition & Partnership Inquiries</h2>
-      <p style="max-width:760px;margin:1.8rem auto;color:#cbd5e1;font-size:1.15rem;">
-        These premium assets are selectively available for acquisition, joint ventures, or long-term strategic development. 
-        Valued collectively in the high seven to low eight figures.
+      <h2>Confidential Acquisition & Partnership Inquiries</h2>
+      <p style="max-width:800px;margin:2rem auto 2.5rem;color:#cbd5e1;font-size:1.25rem;opacity:0.9;">
+        These strategic assets are selectively available for acquisition, joint development, or long-term partnership. 
+        Collective valuation in the high seven to low eight figures.
       </p>
-      <a href="#contact" class="btn">Request Confidential Discussion</a>
+      <a href="mailto:your-email@domain.com" class="btn">Initiate Discussion</a>
     </div>
 
     <footer>
-      © 2026 — All domains are privately owned premium intellectual property. All rights reserved.
+      © 2026 — All domains are privately owned, premium intellectual property. All rights reserved.
     </footer>
   </div>
 
