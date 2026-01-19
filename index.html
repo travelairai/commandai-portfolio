@@ -3,188 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Premium AI Domain Portfolio</title>
-  <meta name="description" content="A curated collection of high-value AI domain assets positioned across control, governance, execution, planning and vertical intelligence."/>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <title>CommandAI.ai – Premium AI Portfolio Asset</title>
+  <meta name="description" content="CommandAI.ai leads a privately held collection of ultra-premium AI domain assets collectively valued in the high seven to low eight figures."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e1a;
-      --card: rgba(17,24,39,0.65);
-      --border: rgba(96,165,250,0.20);
-      --borderHover: rgba(96,165,250,0.50);
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #60a5fa;
-      --glow: rgba(96,165,250,0.40);
-      --radius: 24px;
+      --bg: #0a0e1f;
+      --card: rgba(20, 28, 50, 0.72);
+      --border: rgba(120, 160, 255, 0.25);
+      --borderHover: rgba(120, 160, 255, 0.65);
+      --text: #f8fbff;
+      --muted: #94a3c8;
+      --accent: #5c9eff;
+      --glow: rgba(92, 158, 255, 0.5);
+      --radius: 28px;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: 
-        linear-gradient(rgba(10,14,26,0.82), rgba(0,0,0,0.90)),
-        url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2070&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(rgba(10,14,31,0.88), rgba(0,0,0,0.95)),
+                  url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2100&auto=format&fit=crop&q=90') center/cover no-repeat fixed;
       background-blend-mode: multiply;
       color: var(--text);
       line-height: 1.65;
       min-height: 100dvh;
     }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: clamp(80px, 10vw, 140px) 32px;
-    }
-
-    header {
-      text-align: center;
-      padding-bottom: 7rem;
-    }
-
+    .container { max-width: 1340px; margin: 0 auto; padding: clamp(90px, 12vw, 160px) 40px; }
+    header { text-align: center; padding-bottom: 7rem; }
     h1 {
-      font-size: clamp(4.2rem, 11vw, 7.8rem);
+      font-size: clamp(4.8rem, 12vw, 8.5rem);
       font-weight: 900;
-      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
+      background: linear-gradient(90deg, #5c9eff, #8bb8ff, #c0d8ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.2rem;
+      letter-spacing: -0.05em;
+      margin-bottom: 1.4rem;
     }
-
     .tagline {
-      font-size: clamp(1.4rem, 5vw, 1.8rem);
-      color: #d1d5db;
-      max-width: 960px;
-      margin: 0 auto 3rem;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      color: #b0c8ff;
+      max-width: 1000px;
+      margin: 0 auto 3.5rem;
       font-weight: 300;
-      opacity: 0.92;
+      opacity: 0.94;
     }
-
     .pillRow {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 16px;
       justify-content: center;
-      margin: 2.5rem 0 6rem;
+      margin: 3rem 0 7rem;
     }
-
     .pill {
-      padding: 0.7rem 1.5rem;
-      border: 1px solid rgba(96,165,250,0.35);
+      padding: 0.9rem 1.8rem;
+      border: 1.5px solid rgba(120,160,255,0.4);
       border-radius: 999px;
-      background: rgba(96,165,250,0.15);
-      color: #a5d8ff;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
+      background: rgba(92,158,255,0.12);
+      color: #c0d8ff;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
+      backdrop-filter: blur(8px);
     }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 36px;
     }
-
     .card {
       background: var(--card);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2.8rem;
-      transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-      box-shadow: 0 12px 60px rgba(0,0,0,0.55);
+      padding: 3rem;
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 0 16px 70px rgba(0,0,0,0.6);
     }
-
     .card:hover {
-      transform: translateY(-14px);
+      transform: translateY(-16px);
       border-color: var(--borderHover);
-      box-shadow: 0 28px 90px var(--glow);
+      box-shadow: 0 32px 110px var(--glow);
     }
-
     .domain {
-      font-size: clamp(1.9rem, 5vw, 2.3rem);
-      font-weight: 800;
-      color: #e0f2fe;
-      margin-bottom: 0.7rem;
+      font-size: clamp(2rem, 5.5vw, 2.5rem);
+      font-weight: 900;
+      color: #e0ecff;
+      margin-bottom: 0.8rem;
     }
-
     .role {
-      font-size: 0.95rem;
-      color: #a5d8ff;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-size: 1.05rem;
+      color: #a5c8ff;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
     }
-
     .cta {
-      margin-top: 8rem;
-      padding: clamp(3.5rem, 8vw, 5rem) clamp(2rem, 6vw, 4.5rem);
-      border-radius: 32px;
-      background: rgba(17,24,39,0.75);
-      backdrop-filter: blur(28px);
-      border: 1px solid var(--border);
+      margin-top: 9rem;
+      padding: 5.5rem 4rem;
+      border-radius: 36px;
+      background: rgba(20,28,50,0.78);
+      backdrop-filter: blur(32px);
+      border: 1.5px solid var(--border);
       text-align: center;
     }
-
     .btn {
       display: inline-block;
-      padding: 1.3rem 3.5rem;
-      background: linear-gradient(135deg, #2563eb, #60a5fa, #a5b4fc);
+      padding: 1.5rem 4.5rem;
+      background: linear-gradient(135deg, #2563eb, #5c9eff, #8bb8ff);
       color: white;
-      font-weight: 800;
-      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      font-weight: 900;
+      font-size: 1.4rem;
       border-radius: 999px;
       text-decoration: none;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 40px rgba(37,99,235,0.45);
-      min-width: 320px;
+      transition: all 0.45s ease;
+      box-shadow: 0 12px 50px rgba(92,158,255,0.5);
+      min-width: 360px;
       touch-action: manipulation;
     }
-
-    .btn:hover,
-    .btn:active {
-      transform: translateY(-5px);
-      box-shadow: 0 24px 100px rgba(96,165,250,0.8);
-    }
-
+    .btn:hover { transform: translateY(-6px); box-shadow: 0 28px 120px rgba(92,158,255,0.85); }
     footer {
-      margin-top: 8rem;
+      margin-top: 9rem;
       text-align: center;
       color: #64748b;
       font-size: 1rem;
-      padding-bottom: 5rem;
+      padding-bottom: 6rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-
     @media (max-width: 768px) {
-      .container { padding: 80px 24px; }
-      h1 { font-size: clamp(3.8rem, 12vw, 5.5rem); }
-      .cta {
-        padding: 3rem 2rem;
-        margin-top: 6rem;
-      }
-      .btn {
-        width: 100%;
-        padding: 1.4rem 2rem;
-        font-size: 1.2rem;
-        min-width: unset;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .btn {
-        padding: 1.5rem 1.5rem;
-      }
+      .container { padding: 90px 28px; }
+      h1 { font-size: 5.2rem; }
+      .cta { padding: 4rem 2.5rem; }
+      .btn { width: 100%; padding: 1.6rem 2rem; font-size: 1.3rem; min-width: unset: unset; }
     }
   </style>
 </head>
@@ -192,9 +143,9 @@
 
   <div class="container">
     <header>
-      <h1>AI Domain Portfolio</h1>
+      <h1>CommandAI.ai</h1>
       <p class="tagline">
-        Privately held, ultra-premium AI infrastructure assets — positioned for the next wave of intelligent systems.
+        Flagship asset of a privately held ultra-premium AI domain portfolio — collectively valued in the high seven to low eight figures.
       </p>
       <div class="pillRow">
         <div class="pill">Control</div>
@@ -209,54 +160,48 @@
       <div class="card">
         <div class="domain">CommandAI.ai</div>
         <div class="role">Control / Orchestration Layer</div>
-        <p>Enterprise command infrastructure for AI agent orchestration, mission-critical workflows, and autonomous system coordination at scale.</p>
+        <p>Enterprise command center for multi-agent AI orchestration, mission-critical workflows, and autonomous system coordination at global scale.</p>
       </div>
-
       <div class="card">
         <div class="domain">BoardAI.ai</div>
         <div class="role">Governance / Decision Intelligence</div>
-        <p>Executive AI governance platform for real-time boardroom insights, compliance automation, and strategic decision support.</p>
+        <p>Executive-grade AI governance platform for real-time boardroom insights, compliance automation, and strategic decision augmentation.</p>
       </div>
-
       <div class="card">
         <div class="domain">MotionAI.ai</div>
         <div class="role">Execution / Automation</div>
-        <p>High-performance execution layer for robotics, logistics, simulation, and intelligent physical-world automation.</p>
+        <p>High-velocity execution layer for robotics, logistics, real-time simulation, and physical-world intelligent automation.</p>
       </div>
-
       <div class="card">
         <div class="domain">TravelAir.ai</div>
-        <div class="role">Vertical Intelligence — Travel</div>
-        <p>Next-generation travel intelligence for predictive personalization, dynamic optimization, and luxury experience orchestration.</p>
+        <div class="role">Vertical — Travel Intelligence</div>
+        <p>Next-generation predictive travel platform for personalization, dynamic optimization, and luxury experience orchestration.</p>
       </div>
-
       <div class="card">
         <div class="domain">TripLogic.ai</div>
         <div class="role">Planning / Optimization</div>
-        <p>Precision trip planning engine with multi-variable logical optimization and seamless ecosystem integration.</p>
+        <p>Precision trip planning engine with logical multi-variable optimization and ecosystem integration.</p>
       </div>
-
       <div class="card">
         <div class="domain">HospitalityAI.ai</div>
-        <div class="role">Vertical Intelligence — Hospitality</div>
-        <p>Comprehensive AI platform for hospitality: guest personalization, operational efficiency, and revenue intelligence.</p>
+        <div class="role">Vertical — Hospitality Intelligence</div>
+        <p>Comprehensive AI suite for guest personalization, operational efficiency, and revenue optimization in hospitality.</p>
       </div>
     </div>
 
     <div class="cta">
-      <h2>Confidential Acquisition & Partnership Inquiries</h2>
-      <p style="max-width:800px;margin:2rem auto 3rem;color:#cbd5e1;font-size:clamp(1.1rem,4vw,1.3rem);opacity:0.9;">
-        These strategic assets are selectively available for acquisition, joint development, or long-term partnership.
-        Collective valuation in the high seven to low eight figures.
+      <h2 style="font-size:clamp(2.2rem,6vw,3rem);margin-bottom:1.5rem;">Confidential Acquisition & Partnership Inquiries</h2>
+      <p style="max-width:840px;margin:2rem auto 3.5rem;color:#b0c8ff;font-size:1.3rem;opacity:0.92;">
+        Selectively available for acquisition, joint venture, or long-term strategic development.
       </p>
-      <a href="mailto:your-email@domain.com" class="btn">Request Confidential Discussion</a>
+      <a href="mailto:inquiry@commandai.ai" class="btn">Request Confidential Discussion</a>
     </div>
 
     <footer>
-     © 2026 CommandAI.ai — All rights reserved.<br>
-      This domain and associated intellectual property are privately owned.<br>
+      © 2026 CommandAI.ai — All rights reserved.<br>
+      All domains listed are privately owned premium intellectual property.<br>
       Strategic partnerships or acquisition discussions may be considered.<br>
-      For informational purposes only. Not an offer to sell.
+      This site is for informational purposes only. Not an offer to sell.
     </footer>
   </div>
 
