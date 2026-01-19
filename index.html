@@ -34,17 +34,8 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: clamp(60px, 10vw, 120px) 24px;
-    }
-
-    header {
-      text-align: center;
-      padding-bottom: 5rem;
-    }
-
+    .container { max-width: 1200px; margin: 0 auto; padding: clamp(60px, 10vw, 120px) 24px; }
+    header { text-align: center; padding-bottom: 5rem; }
     h1 {
       font-size: clamp(4rem, 11vw, 7.5rem);
       font-weight: 900;
@@ -54,7 +45,6 @@
       letter-spacing: -0.04em;
       margin-bottom: 1rem;
     }
-
     .tagline {
       font-size: clamp(1.3rem, 5vw, 1.6rem);
       color: #d1d5db;
@@ -63,13 +53,7 @@
       font-weight: 300;
       opacity: 0.92;
     }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 32px;
-    }
-
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
     .card {
       background: var(--card);
       backdrop-filter: blur(18px);
@@ -79,20 +63,8 @@
       transition: all 0.4s ease;
       box-shadow: 0 10px 48px rgba(0,0,0,0.5);
     }
-
-    .card:hover {
-      transform: translateY(-12px);
-      border-color: var(--borderHover);
-      box-shadow: 0 24px 80px var(--glow);
-    }
-
-    .card h3 {
-      font-size: clamp(1.5rem, 4vw, 1.9rem);
-      font-weight: 700;
-      color: #e0f2fe;
-      margin-bottom: 0.8rem;
-    }
-
+    .card:hover { transform: translateY(-12px); border-color: var(--borderHover); box-shadow: 0 24px 80px var(--glow); }
+    .card h3 { font-size: clamp(1.5rem, 4vw, 1.9rem); font-weight: 700; color: #e0f2fe; margin-bottom: 0.8rem; }
     .cta {
       margin-top: 7rem;
       padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 4rem);
@@ -102,7 +74,6 @@
       border: 1px solid var(--border);
       text-align: center;
     }
-
     .btn {
       display: block;
       width: 100%;
@@ -120,12 +91,7 @@
       touch-action: manipulation;
       text-align: center;
     }
-
-    .btn:hover, .btn:active {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 80px rgba(96,165,250,0.7);
-    }
-
+    .btn:hover, .btn:active { transform: translateY(-4px); box-shadow: 0 20px 80px rgba(96,165,250,0.7); }
     footer {
       margin-top: 7rem;
       padding: 4rem 1rem;
@@ -134,14 +100,12 @@
       color: #64748b;
       border-top: 1px solid rgba(255,255,255,0.1);
     }
-
     @media (max-width: 768px) {
       .container { padding: 60px 20px; }
       h1 { font-size: clamp(3.5rem, 14vw, 5.5rem); }
       .cta { padding: 3rem 2rem; margin-top: 5rem; }
       .btn { padding: 1.4rem 1.5rem; font-size: 1.2rem; }
     }
-
     @media (max-width: 480px) {
       .btn { padding: 1.5rem 1rem; font-size: 1.15rem; }
     }
