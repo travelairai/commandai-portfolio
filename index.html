@@ -2,236 +2,293 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="format-detection" content="telephone=no"/>
   <title>AI Portfolio | Strategic Domain Assets</title>
   <meta name="description" content="A privately held portfolio of premium AI domain assets spanning command, governance, execution, planning, and vertical intelligence."/>
+  
+  <!-- Google Fonts (Inter) for better consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg1:#111827;
-      --bg2:#000000;
-      --card1:#0f172a;
-      --card2:#020617;
-      --border:rgba(255,255,255,0.08);
-      --borderHover:rgba(255,255,255,0.18);
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --brand:#60a5fa;
-      --btn1:#2563eb;
-      --btn2:#38bdf8;
-      --ok:#22c55e;
-      --err:#ef4444;
-      --warn:#f59e0b;
-      --inputBg:rgba(255,255,255,0.04);
+    :root {
+      --bg1: #111827;
+      --bg2: #000000;
+      --card1: #0f172a;
+      --card2: #020617;
+      --border: rgba(255,255,255,0.08);
+      --borderHover: rgba(255,255,255,0.18);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #60a5fa;
+      --btn1: #2563eb;
+      --btn2: #38bdf8;
+      --ok: #22c55e;
+      --err: #ef4444;
+      --warn: #f59e0b;
+      --inputBg: rgba(255,255,255,0.04);
+      --radius: 16px;
     }
 
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: radial-gradient(circle at top, var(--bg1), var(--bg2));
-      color:var(--text);
-    }
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:80px 24px;
-    }
-    h1{
-      font-size:48px;
-      margin:0 0 12px;
-      letter-spacing:-0.02em;
-    }
-    h2{
-      font-size:28px;
-      margin:0 0 12px;
-    }
-    p{
-      color:var(--muted);
-      line-height:1.7;
-      font-size:17px;
-      margin:0 0 14px;
-    }
-    .tagline{
-      font-size:20px;
-      color:#d1d5db;
-      max-width:780px;
-      margin-bottom:26px;
-    }
-    .pillRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:18px 0 38px;
-    }
-    .pill{
-      font-size:12px;
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-      padding:8px 12px;
-      border:1px solid rgba(255,255,255,0.10);
-      border-radius:999px;
-      color:#cbd5e1;
-      background:rgba(255,255,255,0.03);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100dvh;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:22px;
-      margin-top:18px;
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(40px, 8vw, 80px) 20px;
     }
-    .card{
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: clamp(15px, 3.5vw, 17px);
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: clamp(1.15rem, 4vw, 1.3rem);
+      color: #d1d5db;
+      max-width: 780px;
+      margin-bottom: 1.8rem;
+    }
+
+    .pillRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1.2rem 0 2.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 999px;
+      color: #cbd5e1;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 1.2rem;
+    }
+
+    .card {
       background: linear-gradient(180deg, var(--card1), var(--card2));
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:14px;
-      padding:26px;
-      transition: transform 0.2s ease, border 0.2s ease;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
-    .card:hover{
-      transform: translateY(-4px);
+
+    .card:hover {
+      transform: translateY(-6px);
       border-color: var(--borderHover);
     }
-    .domain{
-      font-size:22px;
-      font-weight:650;
-      margin-bottom:6px;
-    }
-    .role{
-      font-size:12px;
-      letter-spacing:0.10em;
-      text-transform:uppercase;
-      color:var(--brand);
-      margin-bottom:12px;
+
+    .domain {
+      font-size: clamp(1.35rem, 4vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
     }
 
-    .cta{
-      margin-top:64px;
-      padding:34px;
-      border-radius:18px;
+    .role {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 4rem;
+      padding: clamp(24px, 6vw, 34px);
+      border-radius: 18px;
       background: linear-gradient(135deg, #020617, #020617);
-      border:1px solid var(--border);
-    }
-    .ctaGrid{
-      display:grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap:26px;
-      align-items:start;
-    }
-    @media (max-width: 860px){
-      .ctaGrid{ grid-template-columns: 1fr; }
-      h1{ font-size:40px; }
+      border: 1px solid var(--border);
     }
 
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
-      border-radius:999px;
+    .ctaGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .ctaGrid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
       background: linear-gradient(135deg, var(--btn1), var(--btn2));
-      color:#fff;
-      text-decoration:none;
-      font-weight:650;
-      border:none;
-      cursor:pointer;
-    }
-    .btn:disabled{
-      opacity:0.65;
-      cursor:not-allowed;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      min-width: 140px;
+      text-align: center;
     }
 
-    /* Contact form */
-    .formWrap{
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.08);
+    .btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Form */
+    .formWrap {
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.02);
-      padding:18px;
+      padding: 1.4rem;
     }
-    label{
-      display:block;
-      font-size:13px;
-      color:#cbd5e1;
-      margin:12px 0 6px;
+
+    label {
+      display: block;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      margin: 0.9rem 0 0.4rem;
     }
-    input, textarea{
-      width:100%;
-      box-sizing:border-box;
+
+    input, textarea {
+      width: 100%;
       background: var(--inputBg);
-      border:1px solid rgba(255,255,255,0.10);
-      color:var(--text);
-      border-radius:12px;
-      padding:12px 12px;
-      outline:none;
-      font-size:15px;
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    input:focus, textarea:focus{
+
+    input:focus, textarea:focus {
       border-color: rgba(96,165,250,0.55);
       box-shadow: 0 0 0 3px rgba(37,99,235,0.18);
     }
-    textarea{
-      min-height:120px;
-      resize:vertical;
-    }
-    .formRow{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    @media (max-width: 560px){
-      .formRow{ grid-template-columns: 1fr; }
-    }
-    .small{
-      font-size:13px;
-      color:#94a3b8;
-      margin-top:10px;
-    }
-    .status{
-      margin-top:12px;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.10);
-      display:none;
-      font-size:14px;
-    }
-    .status.ok{ display:block; border-color: rgba(34,197,94,0.35); background: rgba(34,197,94,0.10); color:#bbf7d0; }
-    .status.err{ display:block; border-color: rgba(239,68,68,0.35); background: rgba(239,68,68,0.10); color:#fecaca; }
-    .status.warn{ display:block; border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.10); color:#fde68a; }
 
-    footer{
-      margin-top:70px;
-      text-align:center;
-      font-size:13px;
-      color:#6b7280;
+    textarea {
+      min-height: 110px;
+      resize: vertical;
     }
-    .divider{
-      height:1px;
-      width:100%;
+
+    .formRow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 560px) {
+      .formRow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .small {
+      font-size: 0.81rem;
+      color: #94a3b8;
+      margin-top: 0.7rem;
+    }
+
+    .status {
+      margin-top: 1rem;
+      padding: 0.9rem;
+      border-radius: 12px;
+      border: 1px solid;
+      display: none;
+      font-size: 0.9rem;
+    }
+
+    .status.ok    { display: block; border-color: rgba(34,197,94,0.4);  background: rgba(34,197,94,0.12); color: #bbf7d0; }
+    .status.err   { display: block; border-color: rgba(239,68,68,0.4);  background: rgba(239,68,68,0.12); color: #fecaca; }
+    .status.warn  { display: block; border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.12); color: #fde68a; }
+
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 0.81rem;
+      color: #6b7280;
+      padding-bottom: 2rem;
+    }
+
+    .divider {
+      height: 1px;
       background: rgba(255,255,255,0.08);
-      margin: 22px 0 16px;
+      margin: 1.5rem 0;
     }
-    .miniList{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:10px;
+
+    .miniList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 0.8rem;
     }
-    .mini{
-      font-size:13px;
-      color:#cbd5e1;
-      border:1px solid rgba(255,255,255,0.10);
+
+    .mini {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.03);
-      padding:8px 10px;
-      border-radius:12px;
+      padding: 0.5rem 0.9rem;
+      border-radius: 10px;
     }
   </style>
 </head>
-
 <body>
+
   <div class="container">
     <h1>AI Domain Portfolio</h1>
     <p class="tagline">
-      A privately held portfolio of premium AI domain assets designed around the core layers of modern AI:
+      A privately held portfolio of premium AI domain assets designed around the core layers of modern AI: 
       <strong>control, governance, execution, planning, and vertical intelligence</strong>.
     </p>
 
-    <div class="pillRow" aria-label="Portfolio thesis">
+    <div class="pillRow">
       <div class="pill">Control</div>
       <div class="pill">Governance</div>
       <div class="pill">Execution</div>
@@ -239,79 +296,57 @@
       <div class="pill">Vertical Intelligence</div>
     </div>
 
-    <!-- PORTFOLIO GRID (AI domains only — .pro excluded) -->
     <div class="grid">
-
       <div class="card">
         <div class="domain">CommandAI.ai</div>
         <div class="role">Control / Orchestration Layer</div>
-        <p>
-          The command center for artificial intelligence—built for orchestrating AI agents, systems,
-          workflows, and mission-critical operations.
-        </p>
+        <p>The command center for artificial intelligence—built for orchestrating AI agents, systems, workflows, and mission-critical operations.</p>
       </div>
 
       <div class="card">
         <div class="domain">BoardAI.ai</div>
         <div class="role">Governance / Decision Intelligence</div>
-        <p>
-          AI-powered governance, boardroom intelligence, risk/compliance support, and executive decision frameworks
-          for enterprises and institutions.
-        </p>
+        <p>AI-powered governance, boardroom intelligence, risk/compliance support, and executive decision frameworks for enterprises and institutions.</p>
       </div>
 
       <div class="card">
         <div class="domain">MotionAI.ai</div>
         <div class="role">Execution / Automation</div>
-        <p>
-          A strong execution-layer brand for automation, robotics, logistics, simulation,
-          and real-time intelligent systems.
-        </p>
+        <p>A strong execution-layer brand for automation, robotics, logistics, simulation, and real-time intelligent systems.</p>
       </div>
 
       <div class="card">
         <div class="domain">TravelAir.ai</div>
         <div class="role">Vertical Intelligence — Travel</div>
-        <p>
-          A premium AI brand for travel intelligence, planning, optimization,
-          and next-generation travel platforms.
-        </p>
+        <p>A premium AI brand for travel intelligence, planning, optimization, and next-generation travel platforms.</p>
       </div>
 
       <div class="card">
         <div class="domain">TripLogic.ai</div>
         <div class="role">Planning / Optimization</div>
-        <p>
-          Intelligent trip planning, routing, and optimization—built to integrate with
-          larger travel intelligence platforms and vertical AI products.
-        </p>
+        <p>Intelligent trip planning, routing, and optimization—built to integrate with larger travel intelligence platforms and vertical AI products.</p>
       </div>
 
       <div class="card">
         <div class="domain">HospitalityAI.ai</div>
         <div class="role">Vertical Intelligence — Hospitality</div>
-        <p>
-          AI solutions for hospitality operators: guest experience, ops efficiency,
-          revenue intelligence, and modern service automation.
-        </p>
+        <p>AI solutions for hospitality operators: guest experience, ops efficiency, revenue intelligence, and modern service automation.</p>
       </div>
-
     </div>
 
-    <!-- CTA + CONTACT -->
+    <!-- CTA + Contact -->
     <div class="cta" id="contact">
       <div class="ctaGrid">
         <div>
           <h2>Acquisition & Partnership Inquiries</h2>
           <p>
-            These assets are privately owned and selectively available for acquisition,
-            strategic partnerships, or long-term development discussions.
+            These assets are privately owned and selectively available for acquisition, strategic partnerships, or long-term development discussions.
           </p>
+
           <div class="divider"></div>
-          <p class="small">
-            Domains included in this portfolio:
-          </p>
-          <div class="miniList" aria-label="Domains included">
+
+          <p class="small">Domains included in this portfolio:</p>
+          <div class="miniList">
             <div class="mini">commandai.ai</div>
             <div class="mini">boardai.ai</div>
             <div class="mini">motionai.ai</div>
@@ -319,47 +354,46 @@
             <div class="mini">triplogic.ai</div>
             <div class="mini">hospitalityai.ai</div>
           </div>
-          <p class="small" style="margin-top:14px;">
+
+          <p class="small" style="margin-top:1rem;">
             *This page intentionally does not display pricing.
           </p>
         </div>
 
-        <div class="formWrap" aria-label="Contact form">
+        <div class="formWrap">
           <form id="inquiryForm" action="https://formspree.io/f/xnjjngql" method="POST">
-            <!-- OPTIONAL: subject line in your Formspree inbox -->
-            <input type="hidden" name="_subject" value="Portfolio Inquiry (CommandAI.ai)" />
-            <!-- OPTIONAL: honeypot spam trap -->
+            <input type="hidden" name="_subject" value="AI Portfolio Inquiry" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
             <div class="formRow">
               <div>
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required />
+                <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name"/>
               </div>
               <div>
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@company.com" required />
+                <input id="email" name="email" type="email" placeholder="you@company.com" required autocomplete="email"/>
               </div>
             </div>
 
             <label for="company">Company (optional)</label>
-            <input id="company" name="company" type="text" placeholder="Company / organization" />
+            <input id="company" name="company" type="text" placeholder="Company / organization" autocomplete="organization"/>
 
             <label for="interest">Interested in (optional)</label>
-            <input id="interest" name="interest" type="text" placeholder="e.g., CommandAI.ai / bundle / partnership" />
+            <input id="interest" name="interest" type="text" placeholder="e.g., BoardAI.ai / bundle / partnership"/>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me what you’re looking for (acquisition, partnership, timeline, etc.)." required></textarea>
+            <textarea id="message" name="message" placeholder="Tell me what you’re looking for (acquisition, partnership, timeline, etc.)." required rows="5"></textarea>
 
-            <div style="margin-top:14px;">
+            <div style="margin-top:1.2rem;">
               <button class="btn" id="submitBtn" type="submit">Send Inquiry</button>
-              <div class="small" style="margin-top:10px;">
+              <div class="small" style="margin-top:0.7rem;">
                 You’ll receive a response as soon as possible.
               </div>
             </div>
 
             <div id="statusOk" class="status ok">Thanks — your message was sent.</div>
-            <div id="statusErr" class="status err">Something didn’t send. Please try again in a minute.</div>
+            <div id="statusErr" class="status err">Something didn’t send. Please try again.</div>
             <div id="statusWarn" class="status warn">Sending…</div>
           </form>
         </div>
@@ -372,9 +406,8 @@
   </div>
 
   <script>
-    // Nice UX: submit via fetch so the page doesn't leave your site.
-    // Works with Formspree endpoint you provided.
-    (function () {
+    // Form submission with status feedback (works offline-capable)
+    (function() {
       const form = document.getElementById('inquiryForm');
       const btn = document.getElementById('submitBtn');
       const ok = document.getElementById('statusOk');
@@ -385,12 +418,9 @@
         ok.style.display = 'none';
         err.style.display = 'none';
         warn.style.display = 'none';
-        ok.className = 'status ok';
-        err.className = 'status err';
-        warn.className = 'status warn';
       }
 
-      form.addEventListener('submit', async function (e) {
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
         resetStatus();
         warn.style.display = 'block';
@@ -412,12 +442,17 @@
           } else {
             err.style.display = 'block';
           }
-        } catch (ex) {
+        } catch (error) {
           warn.style.display = 'none';
           err.style.display = 'block';
         } finally {
           btn.disabled = false;
         }
+      });
+
+      // Optional: subtle scroll effect on header
+      window.addEventListener('scroll', () => {
+        document.querySelector('header')?.classList.toggle('scrolled', window.scrollY > 80);
       });
     })();
   </script>
