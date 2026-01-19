@@ -2,39 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Premium AI Domain Portfolio</title>
-  <meta name="description" content="Curated ultra-premium AI domain assets positioned at the core of next-generation intelligence infrastructure." />
+  <meta name="description" content="A curated collection of high-value AI domain assets positioned across control, governance, execution, planning and vertical intelligence."/>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #080c17;
-      --card: rgba(17,24,39,0.6);
-      --border: rgba(96,165,250,0.25);
-      --borderHover: rgba(96,165,250,0.55);
+      --bg: #0a0e1a;
+      --card: rgba(17,24,39,0.65);
+      --border: rgba(96,165,250,0.20);
+      --borderHover: rgba(96,165,250,0.50);
       --text: #f8fafc;
       --muted: #94a3b8;
       --accent: #60a5fa;
-      --glow: rgba(96,165,250,0.45);
+      --glow: rgba(96,165,250,0.40);
       --radius: 24px;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: 
-        linear-gradient(rgba(8,12,23,0.75), rgba(0,0,0,0.85)),
-        url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat fixed;
+        linear-gradient(rgba(10,14,26,0.82), rgba(0,0,0,0.90)),
+        url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2070&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
       background-blend-mode: multiply;
       color: var(--text);
       line-height: 1.65;
       min-height: 100dvh;
     }
-    .container { max-width: 1280px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) 32px; }
-    header { text-align: center; padding-bottom: 6rem; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: clamp(80px, 10vw, 140px) 32px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 7rem;
+    }
+
     h1 {
-      font-size: clamp(4rem, 10vw, 7.2rem);
+      font-size: clamp(4.2rem, 11vw, 7.8rem);
       font-weight: 900;
       background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
       -webkit-background-clip: text;
@@ -42,6 +58,7 @@
       letter-spacing: -0.04em;
       margin-bottom: 1.2rem;
     }
+
     .tagline {
       font-size: clamp(1.4rem, 5vw, 1.8rem);
       color: #d1d5db;
@@ -50,6 +67,7 @@
       font-weight: 300;
       opacity: 0.92;
     }
+
     .pillRow {
       display: flex;
       flex-wrap: wrap;
@@ -57,6 +75,7 @@
       justify-content: center;
       margin: 2.5rem 0 6rem;
     }
+
     .pill {
       padding: 0.7rem 1.5rem;
       border: 1px solid rgba(96,165,250,0.35);
@@ -68,31 +87,37 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 32px;
     }
+
     .card {
       background: var(--card);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 2.8rem;
       transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
       box-shadow: 0 12px 60px rgba(0,0,0,0.55);
     }
+
     .card:hover {
       transform: translateY(-14px);
       border-color: var(--borderHover);
       box-shadow: 0 28px 90px var(--glow);
     }
+
     .domain {
       font-size: clamp(1.9rem, 5vw, 2.3rem);
       font-weight: 800;
       color: #e0f2fe;
       margin-bottom: 0.7rem;
     }
+
     .role {
       font-size: 0.95rem;
       color: #a5d8ff;
@@ -101,27 +126,38 @@
       text-transform: uppercase;
       margin-bottom: 1.4rem;
     }
+
     .cta {
       margin-top: 8rem;
-      padding: 5rem;
+      padding: clamp(3.5rem, 8vw, 5rem) clamp(2rem, 6vw, 4.5rem);
       border-radius: 32px;
       background: rgba(17,24,39,0.75);
       backdrop-filter: blur(28px);
       border: 1px solid var(--border);
       text-align: center;
     }
+
     .btn {
-      padding: 1.3rem 4rem;
+      display: inline-block;
+      padding: 1.3rem 3.5rem;
       background: linear-gradient(135deg, #2563eb, #60a5fa, #a5b4fc);
       color: white;
       font-weight: 800;
-      font-size: 1.3rem;
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
       border-radius: 999px;
       text-decoration: none;
       transition: all 0.4s ease;
       box-shadow: 0 10px 40px rgba(37,99,235,0.45);
+      min-width: 320px;
+      touch-action: manipulation;
     }
-    .btn:hover { transform: translateY(-6px); box-shadow: 0 24px 100px rgba(96,165,250,0.8); }
+
+    .btn:hover,
+    .btn:active {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 100px rgba(96,165,250,0.8);
+    }
+
     footer {
       margin-top: 8rem;
       text-align: center;
@@ -129,10 +165,26 @@
       font-size: 1rem;
       padding-bottom: 5rem;
     }
+
     @media (max-width: 768px) {
       .container { padding: 80px 24px; }
-      h1 { font-size: 5rem; }
-      .cta { padding: 4rem; }
+      h1 { font-size: clamp(3.8rem, 12vw, 5.5rem); }
+      .cta {
+        padding: 3rem 2rem;
+        margin-top: 6rem;
+      }
+      .btn {
+        width: 100%;
+        padding: 1.4rem 2rem;
+        font-size: 1.2rem;
+        min-width: unset;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn {
+        padding: 1.5rem 1.5rem;
+      }
     }
   </style>
 </head>
@@ -175,7 +227,7 @@
       <div class="card">
         <div class="domain">TravelAir.ai</div>
         <div class="role">Vertical Intelligence — Travel</div>
-        <p>Next-gen travel intelligence for predictive personalization, dynamic optimization, and luxury experience orchestration.</p>
+        <p>Next-generation travel intelligence for predictive personalization, dynamic optimization, and luxury experience orchestration.</p>
       </div>
 
       <div class="card">
@@ -193,11 +245,11 @@
 
     <div class="cta">
       <h2>Confidential Acquisition & Partnership Inquiries</h2>
-      <p style="max-width:800px;margin:2rem auto 3rem;color:#cbd5e1;font-size:1.3rem;opacity:0.9;">
+      <p style="max-width:800px;margin:2rem auto 3rem;color:#cbd5e1;font-size:clamp(1.1rem,4vw,1.3rem);opacity:0.9;">
         These strategic assets are selectively available for acquisition, joint development, or long-term partnership.
         Collective valuation in the high seven to low eight figures.
       </p>
-      <a href="mailto:your-email@domain.com" class="btn">Initiate Confidential Discussion</a>
+      <a href="mailto:your-email@domain.com" class="btn">Request Confidential Discussion</a>
     </div>
 
     <footer>
