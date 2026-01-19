@@ -2,140 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CommandAI.ai – Premium AI Portfolio Asset</title>
-  <meta name="description" content="CommandAI.ai leads a privately held collection of ultra-premium AI domain assets collectively valued in the high seven to low eight figures."/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <title>CommandAI.ai – Premium AI Command Infrastructure</title>
+  <meta name="description" content="Ultra-premium domain asset for enterprise-grade AI orchestration, agent control, and mission-critical autonomy."/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0a0e1f;
-      --card: rgba(20, 28, 50, 0.72);
-      --border: rgba(120, 160, 255, 0.25);
-      --borderHover: rgba(120, 160, 255, 0.65);
-      --text: #f8fbff;
-      --muted: #94a3c8;
-      --accent: #5c9eff;
-      --glow: rgba(92, 158, 255, 0.5);
-      --radius: 28px;
+      --bg: #080c17;
+      --card: rgba(17,24,39,0.70);
+      --border: rgba(96,165,250,0.28);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+      --glow: rgba(96,165,250,0.45);
+      --radius: 24px;
     }
+
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      background: linear-gradient(rgba(10,14,31,0.88), rgba(0,0,0,0.95)),
-                  url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2100&auto=format&fit=crop&q=90') center/cover no-repeat fixed;
+      background: 
+        linear-gradient(rgba(8,12,23,0.78), rgba(0,0,0,0.88)),
+        url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2070&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
       background-blend-mode: multiply;
       color: var(--text);
       line-height: 1.65;
       min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
     }
-    .container { max-width: 1340px; margin: 0 auto; padding: clamp(90px, 12vw, 160px) 40px; }
-    header { text-align: center; padding-bottom: 7rem; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(60px, 10vw, 120px) 24px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
     h1 {
-      font-size: clamp(4.8rem, 12vw, 8.5rem);
+      font-size: clamp(3.5rem, 11vw, 7rem);
       font-weight: 900;
-      background: linear-gradient(90deg, #5c9eff, #8bb8ff, #c0d8ff);
+      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -0.05em;
-      margin-bottom: 1.4rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
     }
+
     .tagline {
-      font-size: clamp(1.5rem, 5vw, 2rem);
-      color: #b0c8ff;
-      max-width: 1000px;
-      margin: 0 auto 3.5rem;
+      font-size: clamp(1.3rem, 5vw, 1.6rem);
+      color: #d1d5db;
+      max-width: 900px;
+      margin: 0 auto 3rem;
       font-weight: 300;
-      opacity: 0.94;
+      opacity: 0.92;
     }
-    .pillRow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin: 3rem 0 7rem;
-    }
-    .pill {
-      padding: 0.9rem 1.8rem;
-      border: 1.5px solid rgba(120,160,255,0.4);
-      border-radius: 999px;
-      background: rgba(92,158,255,0.12);
-      color: #c0d8ff;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      backdrop-filter: blur(8px);
-    }
-    .grid {
+
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 36px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
     }
+
     .card {
       background: var(--card);
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(18px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 3rem;
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      box-shadow: 0 16px 70px rgba(0,0,0,0.6);
+      padding: 2.4rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 48px rgba(0,0,0,0.5);
     }
+
     .card:hover {
-      transform: translateY(-16px);
+      transform: translateY(-12px);
       border-color: var(--borderHover);
-      box-shadow: 0 32px 110px var(--glow);
+      box-shadow: 0 24px 80px var(--glow);
     }
-    .domain {
-      font-size: clamp(2rem, 5.5vw, 2.5rem);
-      font-weight: 900;
-      color: #e0ecff;
+
+    .card h3 {
+      font-size: clamp(1.5rem, 4vw, 1.9rem);
+      font-weight: 700;
+      color: #e0f2fe;
       margin-bottom: 0.8rem;
     }
-    .role {
-      font-size: 1.05rem;
-      color: #a5c8ff;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 1.6rem;
-    }
+
     .cta {
-      margin-top: 9rem;
-      padding: 5.5rem 4rem;
-      border-radius: 36px;
-      background: rgba(20,28,50,0.78);
-      backdrop-filter: blur(32px);
-      border: 1.5px solid var(--border);
+      margin-top: 7rem;
+      padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 4rem);
+      border-radius: 28px;
+      background: rgba(17,24,39,0.78);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
       text-align: center;
     }
+
     .btn {
-      display: inline-block;
-      padding: 1.5rem 4.5rem;
-      background: linear-gradient(135deg, #2563eb, #5c9eff, #8bb8ff);
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      margin: 1.8rem auto 0;
+      padding: 1.3rem 2.5rem;
+      background: linear-gradient(135deg, #2563eb, #60a5fa, #a5b4fc);
       color: white;
-      font-weight: 900;
-      font-size: 1.4rem;
+      font-weight: 800;
+      font-size: clamp(1.1rem, 5vw, 1.3rem);
       border-radius: 999px;
       text-decoration: none;
-      transition: all 0.45s ease;
-      box-shadow: 0 12px 50px rgba(92,158,255,0.5);
-      min-width: 360px;
+      box-shadow: 0 10px 40px rgba(37,99,235,0.45);
+      transition: all 0.4s ease;
       touch-action: manipulation;
-    }
-    .btn:hover { transform: translateY(-6px); box-shadow: 0 28px 120px rgba(92,158,255,0.85); }
-    footer {
-      margin-top: 9rem;
       text-align: center;
-      color: #64748b;
-      font-size: 1rem;
-      padding-bottom: 6rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
     }
+
+    .btn:hover,
+    .btn:active {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 80px rgba(96,165,250,0.7);
+    }
+
+    footer {
+      margin-top: 7rem;
+      padding: 4rem 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Mobile-first optimizations */
     @media (max-width: 768px) {
-      .container { padding: 90px 28px; }
-      h1 { font-size: 5.2rem; }
-      .cta { padding: 4rem 2.5rem; }
-      .btn { width: 100%; padding: 1.6rem 2rem; font-size: 1.3rem; min-width: unset: unset; }
+      .container { padding: 60px 20px; }
+      h1 { font-size: clamp(3.2rem, 14vw, 5rem); }
+      .cta { padding: 3rem 2rem; margin-top: 5rem; }
+      .btn { padding: 1.4rem 1.5rem; font-size: 1.2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .btn { padding: 1.5rem 1rem; font-size: 1.15rem; }
     }
   </style>
 </head>
@@ -145,63 +155,41 @@
     <header>
       <h1>CommandAI.ai</h1>
       <p class="tagline">
-        Flagship asset of a privately held ultra-premium AI domain portfolio — collectively valued in the high seven to low eight figures.
+        Premium command & orchestration domain asset — central infrastructure for next-generation AI agents, autonomous systems, and mission-critical control.
       </p>
-      <div class="pillRow">
-        <div class="pill">Control</div>
-        <div class="pill">Governance</div>
-        <div class="pill">Execution</div>
-        <div class="pill">Planning</div>
-        <div class="pill">Vertical Intelligence</div>
-      </div>
     </header>
 
-    <div class="grid">
+    <div class="features">
       <div class="card">
-        <div class="domain">CommandAI.ai</div>
-        <div class="role">Control / Orchestration Layer</div>
-        <p>Enterprise command center for multi-agent AI orchestration, mission-critical workflows, and autonomous system coordination at global scale.</p>
+        <h3>Multi-Agent Orchestration</h3>
+        <p>Real-time coordination of complex AI agent networks with zero-latency decision routing and synchronization.</p>
       </div>
+
       <div class="card">
-        <div class="domain">BoardAI.ai</div>
-        <div class="role">Governance / Decision Intelligence</div>
-        <p>Executive-grade AI governance platform for real-time boardroom insights, compliance automation, and strategic decision augmentation.</p>
+        <h3>Mission-Critical Reliability</h3>
+        <p>High-availability architecture built for fault-tolerant, production-grade autonomous operations at global scale.</p>
       </div>
+
       <div class="card">
-        <div class="domain">MotionAI.ai</div>
-        <div class="role">Execution / Automation</div>
-        <p>High-velocity execution layer for robotics, logistics, real-time simulation, and physical-world intelligent automation.</p>
-      </div>
-      <div class="card">
-        <div class="domain">TravelAir.ai</div>
-        <div class="role">Vertical — Travel Intelligence</div>
-        <p>Next-generation predictive travel platform for personalization, dynamic optimization, and luxury experience orchestration.</p>
-      </div>
-      <div class="card">
-        <div class="domain">TripLogic.ai</div>
-        <div class="role">Planning / Optimization</div>
-        <p>Precision trip planning engine with logical multi-variable optimization and ecosystem integration.</p>
-      </div>
-      <div class="card">
-        <div class="domain">HospitalityAI.ai</div>
-        <div class="role">Vertical — Hospitality Intelligence</div>
-        <p>Comprehensive AI suite for guest personalization, operational efficiency, and revenue optimization in hospitality.</p>
+        <h3>Real-Time Telemetry & Control</h3>
+        <p>Advanced visualization, monitoring, and human-in-the-loop intervention tools for full-stack oversight.</p>
       </div>
     </div>
 
     <div class="cta">
-      <h2 style="font-size:clamp(2.2rem,6vw,3rem);margin-bottom:1.5rem;">Confidential Acquisition & Partnership Inquiries</h2>
-      <p style="max-width:840px;margin:2rem auto 3.5rem;color:#b0c8ff;font-size:1.3rem;opacity:0.92;">
-        Selectively available for acquisition, joint venture, or long-term strategic development.
+      <h2>Confidential Acquisition & Partnership Inquiries</h2>
+      <p style="max-width:800px;margin:2rem auto 3rem;color:#cbd5e1;font-size:clamp(1.1rem,4vw,1.3rem);opacity:0.9;">
+        CommandAI.ai is a flagship, privately owned ultra-premium asset. Strategic partnerships or acquisition discussions may be considered.
+        Valued in the high seven to low eight figures range.
       </p>
       <a href="mailto:inquiry@commandai.ai" class="btn">Request Confidential Discussion</a>
     </div>
 
     <footer>
       © 2026 CommandAI.ai — All rights reserved.<br>
-      All domains listed are privately owned premium intellectual property.<br>
+      This domain and associated intellectual property are privately owned.<br>
       Strategic partnerships or acquisition discussions may be considered.<br>
-      This site is for informational purposes only. Not an offer to sell.
+      For informational purposes only. Not an offer to sell.
     </footer>
   </div>
 
