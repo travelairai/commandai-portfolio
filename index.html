@@ -11,154 +11,135 @@
 
   <style>
     :root {
-      --bg: #080c17;
+      --bg: #0a0e1a;
       --card: rgba(17,24,39,0.75);
-      --border: rgba(96,165,250,0.25);
+      --border: rgba(96,165,250,0.22);
       --text: #f8fafc;
       --muted: #94a3b8;
       --accent: #60a5fa;
-      --glow: rgba(96,165,250,0.45);
-      --radius: 24px;
+      --glow: rgba(96,165,250,0.35);
+      --radius: 16px;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      background: 
-        linear-gradient(rgba(8,12,23,0.78), rgba(0,0,0,0.88)),
-        url('https://images.unsplash.com/photo-1639325676295-1e0e3a3b3b3b?w=2070&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
-      background-blend-mode: multiply;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
-      min-height: 100dvh;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+      min-height: 100vh;
     }
     .container {
-      max-width: 1280px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: clamp(60px, 10vw, 120px) 24px;
-    }
-    header {
-      text-align: center;
-      padding-bottom: 6rem;
+      padding: clamp(4rem, 10vw, 8rem) 1.5rem;
     }
     h1 {
-      font-size: clamp(4.5rem, 11vw, 8rem);
-      font-weight: 900;
-      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #c084fc);
+      font-size: clamp(3rem, 10vw, 6rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), #a5b4fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
     .tagline {
-      font-size: clamp(1.4rem, 5vw, 1.8rem);
+      font-size: clamp(1.2rem, 5vw, 1.5rem);
       color: #d1d5db;
-      max-width: 960px;
-      margin: 0 auto 3rem;
-      font-weight: 300;
-      opacity: 0.92;
-    }
-    .vision-section {
-      max-width: 900px;
-      margin: 0 auto 4rem;
       text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
     }
     .vision {
-      font-size: clamp(1.15rem, 4vw, 1.35rem);
+      font-size: 1.15rem;
       color: #cbd5e1;
+      margin: 2rem 0 3rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.7;
-      margin-bottom: 2rem;
     }
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 32px;
-      margin-bottom: 5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin: 3rem 0 4rem;
     }
     .card {
       background: var(--card);
-      backdrop-filter: blur(18px);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2.4rem;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 48px rgba(0,0,0,0.5);
+      padding: 1.8rem;
+      transition: all 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-12px);
-      border-color: rgba(96,165,250,0.55);
-      box-shadow: 0 24px 80px var(--glow);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(96,165,250,0.25);
     }
     .card h3 {
-      font-size: clamp(1.5rem, 4vw, 1.9rem);
-      font-weight: 700;
-      color: #e0f2fe;
+      font-size: 1.35rem;
       margin-bottom: 0.8rem;
+      color: #e0f2fe;
     }
-    .cta {
-      margin-top: 7rem;
-      padding: clamp(3.5rem, 8vw, 5.5rem) clamp(2rem, 6vw, 4.5rem);
-      border-radius: 28px;
-      background: rgba(17,24,39,0.78);
-      backdrop-filter: blur(24px);
-      border: 1px solid var(--border);
-      text-align: center;
+    .form-section {
+      max-width: 600px;
+      margin: 4rem auto 0;
     }
-    .btn {
+    .form-section label {
+      display: block;
+      margin: 1rem 0 0.4rem;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    button {
       display: block;
       width: 100%;
-      max-width: 420px;
-      margin: 2rem auto 0;
-      padding: 1.3rem 2.5rem;
-      background: linear-gradient(135deg, #2563eb, #60a5fa, #a5b4fc);
+      margin-top: 1.5rem;
+      padding: 1.1rem;
+      background: linear-gradient(135deg, #2563eb, var(--accent));
       color: white;
-      font-weight: 800;
-      font-size: clamp(1.1rem, 5vw, 1.3rem);
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
       border-radius: 999px;
-      text-decoration: none;
-      box-shadow: 0 10px 40px rgba(37,99,235,0.45);
-      transition: all 0.4s ease;
-      touch-action: manipulation;
-      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
     }
-    .btn:hover, .btn:active {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 80px rgba(96,165,250,0.7);
-    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(96,165,250,0.4); }
     footer {
-      margin-top: 8rem;
-      padding: 4rem 1rem;
+      margin-top: 6rem;
+      padding: 3rem 0;
       text-align: center;
-      font-size: 0.95rem;
-      color: #64748b;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    @media (max-width: 768px) {
-      .container { padding: 60px 20px; }
-      h1 { font-size: clamp(3.8rem, 14vw, 5.8rem); }
-      .cta { padding: 3.5rem 2rem; margin-top: 6rem; }
-      .btn { padding: 1.4rem 1.5rem; font-size: 1.2rem; }
-    }
-    @media (max-width: 480px) {
-      .btn { padding: 1.5rem 1rem; font-size: 1.15rem; }
+    @media (max-width: 640px) {
+      .container { padding: 4rem 1rem; }
+      h1 { font-size: 3.5rem; }
+      button { padding: 1.2rem; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <header>
-      <h1>Command AI</h1>
-      <p class="tagline">
-        The central command infrastructure for next-generation AI orchestration, autonomous systems, and mission-critical control.
-      </p>
-    </header>
+    <h1>Command AI</h1>
+    <p class="tagline">The command center for next-generation AI orchestration and mission-critical control.</p>
 
-    <div class="vision-section">
-      <p class="vision">
-        Command AI is the nervous system of enterprise AI. It orchestrates agents, coordinates systems, routes decisions, and executes workflows at global scale with zero-latency precision and fault-tolerant reliability. From digital intent to physical outcome — full observability, human-in-the-loop control, and unbreakable autonomy. Built for organizations that demand AI to move fast, stay secure, and never lose command.
-      </p>
-    </div>
+    <p class="vision">
+      Command AI is the central nervous system of enterprise AI. It orchestrates agents, coordinates systems, routes decisions, and executes workflows at global scale with zero-latency precision and fault-tolerant reliability. From digital intent to physical outcome — full observability, human-in-the-loop control, and unbreakable autonomy. Built for organizations that demand AI to move fast, stay secure, and never lose command.
+    </p>
 
     <div class="features">
       <div class="card">
@@ -177,22 +158,25 @@
       </div>
     </div>
 
-    <div class="cta">
-      <h2>Confidential Acquisition & Partnership Inquiries</h2>
-      <p style="max-width:800px;margin:2rem auto 3rem;color:#cbd5e1;font-size:clamp(1.1rem,4vw,1.3rem);opacity:0.9;">
-        Command AI is a flagship, privately owned ultra-premium asset. Strategic partnerships or acquisition discussions may be considered.
-        Valued in the high seven to low eight figures range.
-      </p>
-      <a href="https://formspree.io/f/xnjjngql" class="btn">Request Confidential Discussion</a>
+    <div class="form-section">
+      <h2 style="text-align:center;margin-bottom:1.5rem;">Request Confidential Briefing</h2>
+      <form action="https://formspree.io/f/xnjjngql" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="Tell us about your interest, project, or inquiry..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
 
     <footer>
-      © 2026 Command AI — All rights reserved.<br>
-      This domain and associated intellectual property are privately owned.<br>
-      Strategic partnerships or acquisition discussions may be considered.<br>
-      For informational purposes only. Not an offer to sell.
+      © 2026 | All rights reserved. Privately held asset.
     </footer>
   </div>
-
 </body>
 </html>
