@@ -1,4 +1,4 @@
-<!doctype html>
+[10:45 PM, 1/22/2026] .: <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -21,7 +21,31 @@
       --exec:#5F8CFF;   /* execution */
       --phys:#8B6CFF;   /* physical / autonomy */
       --execSoft:rgba(95,140,255,.12);
-      --physSoft:rgba(139,108,255,.10);
+      --physSoft:r…
+[10:56 PM, 1/22/2026] .: <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CommanAI.ai — Command & Control Intelligence for AI Systems</title>
+
+  <meta name="description" content="CommanAI.ai is positioned as command and control intelligence for AI-driven systems — providing centralized authority, orchestration, and decision governance across complex autonomous environments. Available for strategic acquisition." />
+
+  <style>
+    :root{
+      --bg:#05090A;
+      --panel:#0B1416;
+
+      --text:#F4FAF9;
+      --muted:#C6D8D6;
+      --muted2:#A9BFBC;
+
+      --line:rgba(255,255,255,.18);
+
+      --cmd:#2FD1B3;   /* command authority */
+      --ctl:#1FA4A0;   /* control / governance */
+      --cmdSoft:rgba(47,209,179,.12);
+      --ctlSoft:rgba(31,164,160,.10);
     }
 
     *{box-sizing:border-box}
@@ -31,8 +55,8 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background:
-        radial-gradient(900px 420px at 15% -10%, var(--execSoft), transparent 60%),
-        radial-gradient(700px 380px at 85% 10%, var(--physSoft), transparent 65%),
+        radial-gradient(900px 420px at 15% -10%, var(--cmdSoft), transparent 60%),
+        radial-gradient(700px 380px at 85% 10%, var(--ctlSoft), transparent 65%),
         var(--bg);
       color:var(--text);
       line-height:1.6;
@@ -69,7 +93,7 @@
 
     .meta{
       font-size:12px;
-      color:rgba(203,212,234,.88);
+      color:rgba(198,216,214,.88);
     }
 
     nav{
@@ -81,7 +105,7 @@
 
     nav a{
       font-size:13px;
-      color:#D6DEEF;
+      color:#D6EFEA;
       padding:8px 10px;
       border:1px solid rgba(255,255,255,.22);
       border-radius:999px;
@@ -122,22 +146,22 @@
       white-space:nowrap;
     }
 
-    .pill.exec{
-      border:1px solid rgba(95,140,255,.45);
-      background:rgba(95,140,255,.14);
-      color:#E6ECFF;
+    .pill.cmd{
+      border:1px solid rgba(47,209,179,.45);
+      background:rgba(47,209,179,.14);
+      color:#E6FFFA;
     }
 
-    .pill.phys{
-      border:1px solid rgba(139,108,255,.45);
-      background:rgba(139,108,255,.14);
-      color:#EEE9FF;
+    .pill.ctl{
+      border:1px solid rgba(31,164,160,.45);
+      background:rgba(31,164,160,.14);
+      color:#E8FFFE;
     }
 
     .pill.neutral{
       border:1px solid rgba(255,255,255,.26);
       background:rgba(255,255,255,.06);
-      color:#E7ECF8;
+      color:#E7F5F3;
       font-weight:560;
     }
 
@@ -146,7 +170,7 @@
       font-size:42px;
       line-height:1.05;
       letter-spacing:-.7px;
-      color:#F7F9FF;
+      color:#F7FFFD;
     }
 
     .subhead{
@@ -176,21 +200,21 @@
     }
 
     .btn.primary{
-      border:1px solid rgba(95,140,255,.45);
+      border:1px solid rgba(47,209,179,.45);
       background:
-        linear-gradient(135deg, rgba(95,140,255,.26), rgba(139,108,255,.18));
+        linear-gradient(135deg, rgba(47,209,179,.28), rgba(31,164,160,.18));
       color:#FFFFFF;
     }
 
     .btn.primary:hover{
-      box-shadow:0 14px 36px rgba(95,140,255,.24);
+      box-shadow:0 14px 36px rgba(47,209,179,.24);
       transform:translateY(-1px);
     }
 
     .btn.secondary{
       border:1px solid rgba(255,255,255,.28);
       background:rgba(255,255,255,.05);
-      color:#F1F4FF;
+      color:#F1FFFC;
     }
 
     .btn.secondary:hover{
@@ -221,7 +245,7 @@
       margin:0 0 8px;
       font-size:18px;
       letter-spacing:-.2px;
-      color:#F3F6FF;
+      color:#F3FFFD;
     }
 
     .card p{
@@ -235,7 +259,7 @@
     .sectionTitle{
       font-size:16px;
       margin-bottom:12px;
-      color:#F0F4FF;
+      color:#F0FFFC;
       letter-spacing:-.2px;
     }
 
@@ -281,7 +305,7 @@
 
     label{
       font-size:13px;
-      color:rgba(203,212,234,.9);
+      color:rgba(198,216,214,.9);
     }
 
     input, select, textarea{
@@ -289,7 +313,7 @@
       padding:12px;
       border-radius:12px;
       border:1px solid rgba(255,255,255,.20);
-      background:#0A1120;
+      background:#0A1416;
       color:#FFFFFF;
       outline:none;
     }
@@ -298,7 +322,7 @@
 
     .fine{
       font-size:12px;
-      color:rgba(203,212,234,.78);
+      color:rgba(198,216,214,.78);
       margin-top:10px;
     }
 
@@ -307,7 +331,7 @@
       padding-top:22px;
       border-top:1px solid rgba(255,255,255,.14);
       font-size:12px;
-      color:rgba(203,212,234,.78);
+      color:rgba(198,216,214,.78);
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
@@ -321,7 +345,7 @@
 
     <header>
       <div class="brand">
-        <div class="logo">MotionAI.ai</div>
+        <div class="logo">CommanAI.ai</div>
         <div class="meta">
           Privately owned • Acquisition-ready domain asset • Available via Afternic
         </div>
@@ -338,18 +362,18 @@
     <!-- HERO -->
     <section class="hero" id="positioning">
       <div class="pills">
-        <span class="pill exec">Execution infrastructure</span>
-        <span class="pill phys">Physical AI</span>
+        <span class="pill cmd">Command intelligence</span>
+        <span class="pill ctl">Control & governance</span>
         <span class="pill neutral">Enterprise positioning</span>
         <span class="pill neutral">Strategic acquisition</span>
       </div>
 
-      <h1>Execution infrastructure for physical AI</h1>
+      <h1>Command and control intelligence for AI systems</h1>
 
       <p class="subhead">
-        MotionAI.ai is positioned as the execution layer between perception, planning,
-        and autonomous real-world action — built for environments where systems must
-        operate safely, predictably, and at scale.
+        CommanAI.ai is positioned as the command layer that coordinates decisions,
+        agents, and systems — providing centralized authority, orchestration, and
+        governance across complex AI-driven environments.
       </p>
 
       <div class="ctaRow">
@@ -361,17 +385,15 @@
         <div class="card">
           <h2>What this brand communicates</h2>
           <p>
-            MotionAI reads as serious, physical, and infrastructure-grade — the layer
-            that makes autonomy reliable through orchestration, guardrails, control,
-            and execution in the real world.
+            CommanAI reads as authoritative, centralized, and infrastructure-grade —
+            the system that decides, coordinates, and governs how AI operates at scale.
           </p>
         </div>
         <div class="card">
           <h2>How acquirers deploy it</h2>
           <p>
-            As a platform name, product line, infrastructure layer, or holding-company
-            identity — designed to sit beside robotics, industrial autonomy, logistics,
-            or safety-critical systems.
+            As a command layer, control plane, decision authority, or platform identity —
+            sitting above execution systems, agents, and physical AI.
           </p>
         </div>
       </div>
@@ -379,18 +401,17 @@
 
     <!-- WHY -->
     <section id="why">
-      <div class="sectionTitle">Why this category matters now</div>
+      <div class="sectionTitle">Why command layers matter</div>
       <div class="box">
         <p>
-          As AI models improve, the bottleneck shifts downstream. The hardest problems
-          are no longer only perception or reasoning — they are execution: coordination,
-          exception handling, safety, compliance, and reliable behavior in physical
-          environments.
+          As AI systems become more autonomous, the need for centralized command,
+          coordination, and governance increases. Without a clear authority layer,
+          systems fragment, risks compound, and control erodes.
         </p>
         <p>
-          MotionAI.ai is positioned to represent that missing layer — the infrastructure
-          that turns decisions into dependable action across machines, fleets, facilities,
-          and field operations.
+          CommanAI.ai is positioned to represent the intelligence that sits above
+          execution — defining intent, constraints, escalation, and control across
+          distributed agents and systems.
         </p>
       </div>
     </section>
@@ -401,22 +422,20 @@
       <div class="twoCol">
         <div class="box">
           <ul>
-            <li>Robotics orchestration, task sequencing, and execution control</li>
-            <li>Industrial autonomy and machine coordination</li>
-            <li>Logistics and fleet dispatch, routing, and exception handling</li>
-            <li>Safety-critical workflows with auditability and fallback states</li>
-            <li>Field operations, inspection, and physical process automation</li>
+            <li>Multi-agent orchestration and coordination</li>
+            <li>Command and control for autonomous fleets</li>
+            <li>AI operations governance and oversight</li>
+            <li>Defense, security, and mission command systems</li>
+            <li>Enterprise decision authority across AI platforms</li>
           </ul>
         </div>
         <div class="box">
           <p>
-            This page is intentionally written for enterprise buyers — operators,
-            infrastructure teams, and strategic acquirers evaluating long-term
-            positioning rather than short-term product launches.
+            This page is intentionally written for enterprise and defense-aligned buyers —
+            organizations evaluating long-term control, not feature velocity.
           </p>
           <p class="fine">
-            If you’re building where autonomy meets operations, MotionAI.ai is a clean,
-            defensible front-door brand.
+            If MotionAI.ai is how systems act, CommanAI.ai is how they decide.
           </p>
         </div>
       </div>
@@ -428,16 +447,16 @@
       <div class="twoCol">
         <div class="box">
           <ul>
-            <li>Robotics platforms and autonomy stacks</li>
-            <li>Industrial automation and manufacturing software firms</li>
-            <li>Logistics, mobility, and fleet technology providers</li>
-            <li>Defense and safety-critical systems integrators</li>
-            <li>Strategic buyers seeking a category-defining execution brand</li>
+            <li>Defense, aerospace, and national security platforms</li>
+            <li>Robotics and autonomous fleet companies</li>
+            <li>Industrial and infrastructure AI providers</li>
+            <li>AI operations and control-plane vendors</li>
+            <li>Strategic buyers seeking command authority in AI systems</li>
           </ul>
         </div>
         <div class="box">
           <p>
-            MotionAI.ai is offered for strategic acquisition, partnership, or premium
+            CommanAI.ai is offered for strategic acquisition, partnership, or premium
             purchase. The intent is alignment with a serious buyer — not volume brokering.
           </p>
           <p class="fine">
@@ -450,7 +469,7 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="sectionTitle">Inquire about MotionAI.ai</div>
+      <div class="sectionTitle">Inquire about CommanAI.ai</div>
       <div class="box">
         <p>
           Use the form below to request availability, discuss acquisition, or explore
@@ -470,7 +489,7 @@
           <label>Inquiry type</label>
           <select name="interest" required>
             <option value="">Select one</option>
-            <option>Acquire MotionAI.ai</option>
+            <option>Acquire CommanAI.ai</option>
             <option>Partnership / build</option>
             <option>Broker representing buyer</option>
             <option>Other</option>
@@ -479,7 +498,7 @@
           <label>Message</label>
           <textarea name="message" placeholder="Who you are, what you’re building, timeline, and (if possible) budget range."></textarea>
 
-          <input type="hidden" name="_subject" value="MotionAI.ai — Inquiry" />
+          <input type="hidden" name="_subject" value="CommanAI.ai — Inquiry" />
 
           <button class="btn primary" type="submit">Send inquiry</button>
 
@@ -497,7 +516,7 @@
     </section>
 
     <footer>
-      <div>© MotionAI.ai</div>
+      <div>© CommanAI.ai</div>
       <div>Privately owned • Available via Afternic • Direct inquiries welcome</div>
     </footer>
 
