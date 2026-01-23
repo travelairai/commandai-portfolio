@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CommanAI.ai — Command & Control Infrastructure for AI Systems</title>
+  <title>CommanAI.ai — Command & Control Intelligence for AI Systems</title>
 
-  <meta name="description" content="CommanAI.ai is positioned as command-and-control infrastructure for AI systems — centralized authority, orchestration, and governance across agents, fleets, and safety-critical operations. Available for strategic acquisition." />
+  <meta name="description" content="CommanAI.ai is positioned as command and control intelligence for AI-driven systems — providing centralized authority, orchestration, and governance across complex autonomous environments." />
 
   <style>
     :root{
       --bg:#05090A;
       --panel:#0B1416;
 
-      --text:#F3FBF9;
+      --text:#F4FAF9;
       --muted:#C6D8D6;
-      --muted2:#A8BFBC;
+      --muted2:#A9BFBC;
 
       --line:rgba(255,255,255,.18);
 
-      /* Command authority palette (emerald/teal) */
+      /* Command authority palette */
       --cmd:#2FD1B3;
       --ctl:#1FA4A0;
       --cmdSoft:rgba(47,209,179,.12);
@@ -55,22 +55,9 @@
       margin-bottom:36px;
     }
 
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
-
-    .logo{
-      font-size:20px;
-      font-weight:800;
-      letter-spacing:.4px;
-    }
-
-    .meta{
-      font-size:12px;
-      color:rgba(198,216,214,.88);
-    }
+    .brand{display:flex; flex-direction:column; gap:4px}
+    .logo{font-size:20px; font-weight:800; letter-spacing:.4px}
+    .meta{font-size:12px; color:rgba(198,216,214,.88)}
 
     nav{
       display:flex;
@@ -78,7 +65,6 @@
       flex-wrap:wrap;
       justify-content:flex-end;
     }
-
     nav a{
       font-size:13px;
       color:#D6EFEA;
@@ -88,7 +74,6 @@
       background:rgba(255,255,255,.03);
       transition:.15s ease;
     }
-
     nav a:hover{
       color:#FFFFFF;
       border-color:rgba(255,255,255,.36);
@@ -108,7 +93,6 @@
       gap:10px;
       margin-bottom:16px;
     }
-
     .pill{
       display:inline-flex;
       align-items:center;
@@ -117,21 +101,17 @@
       font-size:12px;
       font-weight:600;
       letter-spacing:.15px;
-      white-space:nowrap;
     }
-
     .pill.cmd{
       border:1px solid rgba(47,209,179,.45);
       background:rgba(47,209,179,.14);
       color:#E6FFFA;
     }
-
     .pill.ctl{
       border:1px solid rgba(31,164,160,.45);
       background:rgba(31,164,160,.14);
       color:#E8FFFE;
     }
-
     .pill.neutral{
       border:1px solid rgba(255,255,255,.26);
       background:rgba(255,255,255,.06);
@@ -160,7 +140,6 @@
       gap:12px;
       margin-top:18px;
     }
-
     .btn{
       display:inline-flex;
       align-items:center;
@@ -172,27 +151,19 @@
       transition:.15s ease;
       cursor:pointer;
     }
-
     .btn.primary{
       border:1px solid rgba(47,209,179,.45);
       background: linear-gradient(135deg, rgba(47,209,179,.28), rgba(31,164,160,.18));
       color:#FFFFFF;
     }
-
     .btn.primary:hover{
       box-shadow:0 14px 36px rgba(47,209,179,.24);
       transform:translateY(-1px);
     }
-
     .btn.secondary{
       border:1px solid rgba(255,255,255,.28);
       background:rgba(255,255,255,.05);
       color:#F1FFFC;
-    }
-
-    .btn.secondary:hover{
-      border-color:rgba(255,255,255,.40);
-      transform:translateY(-1px);
     }
 
     .grid{
@@ -201,7 +172,6 @@
       gap:16px;
       margin-top:22px;
     }
-
     @media (min-width:960px){
       .grid{grid-template-columns:1.15fr .85fr}
     }
@@ -212,23 +182,18 @@
       padding:20px;
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
     }
-
     .card h2{
       margin:0 0 8px;
       font-size:18px;
-      letter-spacing:-.2px;
       color:#F3FFFD;
     }
-
     .card p{margin:0; color:var(--muted2)}
 
     section{margin-top:34px}
-
     .sectionTitle{
       font-size:16px;
       margin-bottom:12px;
       color:#F0FFFC;
-      letter-spacing:-.2px;
     }
 
     .twoCol{
@@ -236,7 +201,6 @@
       grid-template-columns:1fr;
       gap:16px;
     }
-
     @media (min-width:960px){
       .twoCol{grid-template-columns:1fr 1fr}
     }
@@ -247,24 +211,14 @@
       padding:22px;
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
     }
-
     .box p{margin:0; color:var(--muted)}
     .box p + p{margin-top:10px}
 
     ul{margin:0; padding-left:18px; color:var(--muted)}
     li{margin:10px 0}
 
-    form{
-      display:grid;
-      gap:12px;
-      margin-top:18px;
-    }
-
-    label{
-      font-size:13px;
-      color:rgba(198,216,214,.9);
-    }
-
+    form{display:grid; gap:12px; margin-top:18px}
+    label{font-size:13px; color:rgba(198,216,214,.9)}
     input, select, textarea{
       width:100%;
       padding:12px;
@@ -272,9 +226,7 @@
       border:1px solid rgba(255,255,255,.20);
       background:#0A1416;
       color:#FFFFFF;
-      outline:none;
     }
-
     textarea{min-height:120px}
 
     .fine{
@@ -298,178 +250,154 @@
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <header>
-      <div class="brand">
-        <div class="logo">CommanAI.ai</div>
-        <div class="meta">Privately owned • Acquisition-ready domain asset • Available via Afternic</div>
-      </div>
-      <nav>
-        <a href="#positioning">Positioning</a>
-        <a href="#why">Why now</a>
-        <a href="#usecases">Use cases</a>
-        <a href="#fit">Acquisition fit</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero" id="positioning">
-      <div class="pills">
-        <span class="pill cmd">Command intelligence</span>
-        <span class="pill ctl">Control & governance</span>
-        <span class="pill neutral">Enterprise positioning</span>
-        <span class="pill neutral">Strategic acquisition</span>
-      </div>
-
-      <h1>Command &amp; control infrastructure for AI systems</h1>
-
-      <p class="subhead">
-        CommanAI.ai is positioned as the authority layer that coordinates intent, constraints, and execution —
-        providing centralized command, orchestration, and governance across agents, fleets, and AI-driven operations.
-      </p>
-
-      <div class="ctaRow">
-        <a class="btn primary" href="#contact">Request acquisition availability</a>
-        <a class="btn secondary" href="#fit">View acquisition fit</a>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h2>What this brand communicates</h2>
-          <p>
-            Authority, coordination, and control. CommanAI reads as the layer that decides, aligns,
-            and governs how autonomous systems operate at scale.
-          </p>
-        </div>
-        <div class="card">
-          <h2>How acquirers use it</h2>
-          <p>
-            As a control plane, command layer, mission authority, or platform identity —
-            sitting above execution, agents, and physical AI.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section id="why">
-      <div class="sectionTitle">Why command layers become inevitable</div>
-      <div class="box">
-        <p>
-          As AI shifts from assistants to systems, the core requirement becomes governance:
-          who decides, what constraints apply, how exceptions escalate, and how control is maintained.
-        </p>
-        <p>
-          CommanAI.ai is positioned to represent that centralized authority — the command intelligence
-          that coordinates distributed agents and operational systems with discipline and accountability.
-        </p>
-      </div>
-    </section>
-
-    <!-- USE CASES -->
-    <section id="usecases">
-      <div class="sectionTitle">High-value use cases</div>
-      <div class="twoCol">
-        <div class="box">
-          <ul>
-            <li>Multi-agent coordination and orchestration</li>
-            <li>Command-and-control for autonomous fleets</li>
-            <li>Operational governance for AI deployments</li>
-            <li>Mission command systems in defense and security contexts</li>
-            <li>Enterprise decision authority across AI platforms</li>
-          </ul>
-        </div>
-        <div class="box">
-          <p>
-            This page is intentionally written for serious buyers — organizations that care about
-            control, oversight, and reliable autonomy in complex environments.
-          </p>
-          <p class="fine">
-            If MotionAI.ai is how systems act, CommanAI.ai is how they decide.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACQUISITION FIT -->
-    <section id="fit">
-      <div class="sectionTitle">Ideal acquisition profile</div>
-      <div class="twoCol">
-        <div class="box">
-          <ul>
-            <li>Defense, aerospace, and national security platforms</li>
-            <li>Robotics and autonomous fleet companies</li>
-            <li>Industrial and infrastructure AI providers</li>
-            <li>AI ops and control-plane vendors</li>
-            <li>Strategic buyers seeking command authority in AI systems</li>
-          </ul>
-        </div>
-        <div class="box">
-          <p>
-            CommanAI.ai is offered for strategic acquisition, partnership, or premium purchase.
-            The intent is alignment with a serious buyer — not volume brokering.
-          </p>
-          <p class="fine">
-            Available via Afternic for streamlined transaction, with direct inquiries welcomed below.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="sectionTitle">Inquire about CommanAI.ai</div>
-      <div class="box">
-        <p>
-          Use the form below to request availability, discuss acquisition, or explore partnership alignment.
-          Serious inquiries only.
-        </p>
-
-        <form action="https://formspree.io/f/xnjjngql" method="POST">
-          <label>Name</label>
-          <input type="text" name="name" required />
-
-          <label>Email</label>
-          <input type="email" name="email" required />
-
-          <label>Company (optional)</label>
-          <input type="text" name="company" />
-
-          <label>Inquiry type</label>
-          <select name="interest" required>
-            <option value="">Select one</option>
-            <option>Acquire CommanAI.ai</option>
-            <option>Partnership / build</option>
-            <option>Broker representing buyer</option>
-            <option>Other</option>
-          </select>
-
-          <label>Message</label>
-          <textarea name="message" placeholder="Who you are, what you’re building, timeline, and (if possible) budget range."></textarea>
-
-          <input type="hidden" name="_subject" value="CommanAI.ai — Inquiry" />
-
-          <button class="btn primary" type="submit">Send inquiry</button>
-
-          <div class="fine">
-            If aligned, you will receive a reply outlining availability and next steps.
-            Low-effort or non-strategic inquiries may not receive a response.
-          </div>
-        </form>
-
-        <div class="fine" style="margin-top:12px">
-          Note: This is an acquisition-grade asset presentation. It does not represent an operating product unless explicitly stated in writing.
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div>© CommanAI.ai</div>
-      <div>Privately owned • Available via Afternic • Direct inquiries welcome</div>
-    </footer>
-
+<header>
+  <div class="brand">
+    <div class="logo">CommanAI.ai</div>
+    <div class="meta">Privately owned • Strategic discussions by inquiry only</div>
   </div>
+  <nav>
+    <a href="#positioning">Positioning</a>
+    <a href="#why">Why it matters</a>
+    <a href="#usecases">Use cases</a>
+    <a href="#fit">Strategic fit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="positioning">
+  <div class="pills">
+    <span class="pill cmd">Command intelligence</span>
+    <span class="pill ctl">Control & governance</span>
+    <span class="pill neutral">Enterprise infrastructure</span>
+    <span class="pill neutral">Private asset</span>
+  </div>
+
+  <h1>Command and control intelligence for AI systems</h1>
+
+  <p class="subhead">
+    CommanAI.ai is positioned as the authority layer that coordinates decisions, constraints,
+    and escalation — providing centralized command, orchestration, and governance across
+    complex AI-driven and autonomous environments.
+  </p>
+
+  <div class="ctaRow">
+    <a class="btn primary" href="#contact">Request a private discussion</a>
+    <a class="btn secondary" href="#fit">View strategic fit</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>What this brand represents</h2>
+      <p>
+        CommanAI signals authority. It is the layer that decides, coordinates, and governs how
+        intelligent systems behave when autonomy scales beyond manual oversight.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Where it sits in the stack</h2>
+      <p>
+        Above execution layers and physical AI — defining intent, constraints, escalation,
+        and control across distributed agents and operational systems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="sectionTitle">Why command layers become unavoidable</div>
+  <div class="box">
+    <p>
+      As AI systems move from tools to operators, the limiting factor becomes governance.
+      Without a command layer, autonomy fragments, risk compounds, and accountability dissolves.
+    </p>
+    <p>
+      CommanAI.ai is positioned to represent the centralized intelligence that maintains
+      authority, coherence, and control across large-scale AI deployments.
+    </p>
+  </div>
+</section>
+
+<section id="usecases">
+  <div class="sectionTitle">High-value use cases</div>
+  <div class="twoCol">
+    <div class="box">
+      <ul>
+        <li>Multi-agent coordination and escalation control</li>
+        <li>Command systems for autonomous fleets and robotics</li>
+        <li>AI operations governance and oversight</li>
+        <li>Defense, security, and mission command environments</li>
+        <li>Enterprise control planes for AI platforms</li>
+      </ul>
+    </div>
+    <div class="box">
+      <p>
+        This asset is written for serious operators — organizations that understand control,
+        discipline, and authority become the true leverage points as AI systems scale.
+      </p>
+      <p class="fine">
+        If MotionAI.ai is execution, CommanAI.ai is command.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="sectionTitle">Strategic acquisition profile</div>
+  <div class="twoCol">
+    <div class="box">
+      <ul>
+        <li>Defense, aerospace, and national security platforms</li>
+        <li>Robotics and autonomous fleet companies</li>
+        <li>Industrial and infrastructure AI providers</li>
+        <li>AI operations and control-plane vendors</li>
+        <li>Strategic buyers seeking authority in AI systems</li>
+      </ul>
+    </div>
+    <div class="box">
+      <p>
+        CommanAI.ai is not publicly listed. Discussions are limited to strategic buyers
+        evaluating long-term command authority within AI-driven environments.
+      </p>
+      <p class="fine">
+        Inquiries are reviewed selectively.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sectionTitle">Request a private discussion</div>
+  <div class="box">
+    <p>
+      Use the form below to initiate a confidential conversation regarding CommanAI.ai.
+      Serious inquiries only.
+    </p>
+
+    <form action="https://formspree.io/f/xnjjngql" method="POST">
+      <label>Name</label>
+      <input type="text" name="name" required />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <label>Company</label>
+      <input type="text" name="company" />
+      <label>Message</label>
+      <textarea name="message" placeholder="Who you are, what you’re building, and why CommanAI.ai is relevant."></textarea>
+      <input type="hidden" name="_subject" value="CommanAI.ai — Private Inquiry" />
+      <button class="btn primary" type="submit">Submit inquiry</button>
+      <div class="fine">
+        Messages lacking strategic context may not receive a response.
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>© CommanAI.ai</div>
+  <div>Privately held • Strategic discussions only</div>
+</footer>
+
+</div>
 </body>
 </html>
