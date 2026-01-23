@@ -1,264 +1,335 @@
-<!DOCTYPE html>
+[2:24 AM, 1/23/2026] .: <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CommandAI.ai — Command & Control Intelligence for AI Systems</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TravelAir.ai — Enterprise Travel Intelligence Infrastructure. An AI-native decision layer designed to sit above booking systems, synthesizing inputs into decision-ready outcomes." />
+  <meta name="theme-color" content="#0B2A5B" />
+  <title>TravelAir.ai — Enterprise Travel Intelligence Infrastructure</title>
 
   <style>
-    :root {
-      --bg: #071c24;
-      --bg-soft: #0c2b36;
-      --text: #eaf4f7;
-      --muted: #b6cbd3;
-      --accent: #16c1a3;
-      --border: rgba(255,255,255,0.08);
+    :root{
+      --bg0:#061a3a;
+      --bg1:#0a2d63;
+      --bg2:#083a76;
+
+      --ink:#eaf2ff;
+      --muted:rgba(234,242,255,.78);
+      --muted2:rgba(234,242,255,.62);
+
+      --glass:rgba(255,255,255,.08);
+      --glass2:rgba(255,255,255,.06);
+      --stroke:rgba(255,2…
+[7:34 AM, 1/23/2026] .: <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CommandAI.ai — Enterprise Command and Control Intelligence. An AI-native command layer designed to sit above execution, coordinating decisions into controlled outcomes." />
+  <meta name="theme-color" content="#0E1A2B" />
+  <title>CommandAI.ai — Enterprise Command and Control Intelligence</title>
+
+  <style>
+    :root{
+      --bg0:#08101d;
+      --bg1:#0b1c33;
+      --bg2:#0e2546;
+
+      --ink:#eef4ff;
+      --muted:rgba(238,244,255,.75);
+      --muted2:rgba(238,244,255,.58);
+
+      --glass:rgba(255,255,255,.07);
+      --glass2:rgba(255,255,255,.05);
+      --stroke:rgba(255,255,255,.14);
+      --stroke2:rgba(255,255,255,.10);
+
+      --accent:#6fb6ff;
+      --accent2:#3b7cff;
+      --emerald:#45e3c3;
+
+      --radius-xl:26px;
+      --radius-lg:18px;
+      --radius-md:14px;
+
+      --shadow: 0 18px 55px rgba(0,0,0,.38);
+      --shadow2: 0 12px 36px rgba(0,0,0,.30);
+
+      --max:1120px;
     }
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #0f3a45, var(--bg));
-      color: var(--text);
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 520px at 18% 12%, rgba(111,182,255,.22), transparent 60%),
+        radial-gradient(720px 420px at 78% 20%, rgba(69,227,195,.14), transparent 62%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg2));
+      overflow-x:hidden;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 24px 120px;
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 40px));margin:0 auto;padding:34px 0 80px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;margin-bottom:22px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(111,182,255,.7) 40%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(69,227,195,.6), transparent 60%),
+        rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 10px 26px rgba(0,0,0,.3);
+    }
+    .brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+    .brand p{margin:3px 0 0;font-size:13px;color:var(--muted2)}
+
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{
+      font-size:13.5px;color:rgba(238,244,255,.8);
+      padding:8px 10px;border-radius:10px;
+    }
+    nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:var(--shadow2);
+      margin:18px 0;
+    }
+    .pill .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--emerald));
+      box-shadow:0 0 0 6px rgba(111,182,255,.14);
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 72px;
+    .grid{
+      display:grid;grid-template-columns:1.05fr .95fr;
+      gap:18px;align-items:start;
     }
 
-    header h1 {
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 0.2px;
+    .panel{
+      background:var(--glass);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
     }
 
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
+    .hero{padding:22px;position:relative;overflow:hidden}
+    .hero:before{
+      content:"";position:absolute;inset:-2px;
+      background:
+        radial-gradient(420px 280px at 18% 14%, rgba(111,182,255,.22), transparent 60%),
+        radial-gradient(420px 300px at 70% 36%, rgba(69,227,195,.16), transparent 60%);
+      pointer-events:none;
+    }
+    .heroInner{position:relative}
+
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .chip{
+      font-size:12px;padding:7px 10px;border-radius:999px;
+      border:1px solid var(--stroke2);
+      background:rgba(255,255,255,.06);
+      color:rgba(238,244,255,.86);
     }
 
-    nav a:hover { color: var(--text); }
+    .title{
+      margin:0;font-size:46px;line-height:1.03;letter-spacing:-.8px;
+    }
+    .lead{
+      margin:14px 0 0;font-size:15.6px;line-height:1.55;
+      color:var(--muted);max-width:60ch;
+    }
+    .lead b{color:#fff}
 
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
+    .ctaStack{display:flex;flex-direction:column;gap:10px;margin-top:18px;width:min(420px,100%)}
+    .cta{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 16px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      font-weight:600;color:#fff;
+    }
+    .cta.primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 18px 40px rgba(59,124,255,.3);
     }
 
-    .hero h2 {
-      font-size: clamp(36px, 5vw, 56px);
-      line-height: 1.15;
-      margin: 0 0 24px;
-      font-weight: 700;
+    .side{display:flex;flex-direction:column;gap:18px}
+    .card{
+      padding:18px;border-radius:var(--radius-xl);
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:var(--shadow2);
+    }
+    .card h3{
+      margin:0 0 10px;font-size:12px;
+      letter-spacing:.18em;text-transform:uppercase;
+      color:var(--muted);
+    }
+    .card p{margin:0;color:#fff;font-size:14.2px;line-height:1.55}
+    .bullets{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+    .bullets li{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;border-radius:14px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      font-size:13.4px;
+    }
+    .bullets li:before{
+      content:"";width:8px;height:8px;border-radius:999px;
+      margin-top:6px;background:var(--accent);
+      box-shadow:0 0 0 6px rgba(111,182,255,.14);
     }
 
-    .hero p {
-      max-width: 760px;
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 36px;
+    section{margin-top:22px}
+    .sectionGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .sectionCard{
+      padding:18px;border-radius:var(--radius-xl);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:var(--shadow2);
+    }
+    .sectionCard h4{
+      margin:0 0 10px;font-size:12px;
+      letter-spacing:.18em;text-transform:uppercase;
+      color:var(--muted);
+    }
+    .sectionCard p{margin:0;color:#fff;font-size:14.2px;line-height:1.55}
+
+    footer{
+      margin-top:26px;display:flex;justify-content:space-between;
+      font-size:12.5px;color:var(--muted2);flex-wrap:wrap;gap:12px;
     }
 
-    .cta {
-      display: inline-flex;
-      gap: 16px;
-    }
-
-    .btn {
-      padding: 14px 22px;
-      border-radius: 8px;
-      font-size: 14px;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      color: var(--text);
-      background: transparent;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #02231f;
-      border-color: transparent;
-      font-weight: 600;
-    }
-
-    section {
-      margin-top: 96px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, var(--bg-soft), rgba(255,255,255,0.01));
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    footer {
-      margin-top: 120px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-      color: var(--muted);
+    @media(max-width:980px){
+      .grid{grid-template-columns:1fr}
+      .sectionGrid{grid-template-columns:1fr}
+      .title{font-size:42px}
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="wrap">
 
-    <header>
+<header>
+  <div class="brand">
+    <div class="logo"></div>
+    <div>
       <h1>CommandAI.ai</h1>
-      <nav>
-        <a href="#positioning">Positioning</a>
-        <a href="#fit">Strategic Fit</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <section class="hero" id="positioning">
-      <div class="eyebrow">Privately owned · Strategic discussions by inquiry only</div>
-
-      <h2>Command and control intelligence<br/>for AI systems</h2>
-
-      <p>
-        CommandAI.ai is positioned as the authority layer governing decision-making,
-        constraints, and escalation across AI systems — providing centralized command
-        and control as autonomy scales beyond direct human oversight.
-      </p>
-
-      <p>
-        As AI systems transition from tools to operators, command layers become unavoidable.
-        Control, intent, and governance determine whether intelligence compounds safely —
-        or fragments at scale.
-      </p>
-
-      <div class="cta">
-        <a class="btn primary" href="#contact">Request a private discussion</a>
-        <a class="btn" href="#fit">View strategic fit</a>
-      </div>
-    </section>
-
-    <section>
-      <div class="grid">
-        <div class="card">
-          <h3>What this asset represents</h3>
-          <p>
-            CommandAI signals authority. It is not a product layer.
-            It is the control surface that defines how intelligent systems behave
-            when autonomy becomes operationally real.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Where it sits in the stack</h3>
-          <p>
-            Above execution layers and physical AI.
-            Defining intent, constraints, escalation, and governance
-            across distributed agents and autonomous systems.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Why command layers matter</h3>
-          <p>
-            As intelligence scales, coordination becomes the bottleneck.
-            Ownership of the command layer determines safety, reliability,
-            and long-term system control.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="fit">
-      <div class="grid">
-        <div class="card">
-          <h3>Strategic buyers</h3>
-          <p>
-            Defense and aerospace contractors, autonomous systems companies,
-            robotics platforms, AI infrastructure providers,
-            and enterprise governance vendors.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Why this name</h3>
-          <p>
-            “Command” is universal, permanent, and non-trend-dependent.
-            It maps cleanly to authority, control, and decision ownership —
-            not features or interfaces.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Acquisition posture</h3>
-          <p>
-            Built as a standalone strategic asset.
-            No operational commitments.
-            Positioned for acquisition, licensing, or long-term hold.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="card">
-        <h3>Private inquiry</h3>
-        <p>
-          CommandAI.ai is privately held.
-          Strategic discussions only.
-        </p>
-
-        <form action="https://formspree.io/f/xnjjngql" method="POST">
-          <input type="text" name="name" placeholder="Name" required
-            style="width:100%;padding:12px;margin-top:16px;border-radius:6px;border:none;" />
-          <input type="email" name="email" placeholder="Email" required
-            style="width:100%;padding:12px;margin-top:12px;border-radius:6px;border:none;" />
-          <textarea name="message" placeholder="Inquiry"
-            style="width:100%;padding:12px;margin-top:12px;border-radius:6px;border:none;min-height:120px;"></textarea>
-          <button type="submit" class="btn primary" style="margin-top:16px;">Submit inquiry</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div>© CommandAI.ai</div>
-      <div>Private asset · No public offering</div>
-    </footer>
-
+      <p>Enterprise Command and Control Intelligence</p>
+    </div>
   </div>
+
+  <nav>
+    <a href="#problem">Enterprise Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#positioning">Platform Positioning</a>
+  </nav>
+</header>
+
+<div class="pill">
+  <div class="dot"></div>
+  <span><b>Command infrastructure</b> above execution</span>
+</div>
+
+<main class="grid">
+
+<section class="panel hero">
+  <div class="heroInner">
+    <div class="chips">
+      <span class="chip">Command infrastructure</span>
+      <span class="chip">AI native orchestration</span>
+      <span class="chip">Private strategic asset</span>
+    </div>
+
+    <h2 class="title">Enterprise Command and Control Intelligence</h2>
+
+    <p class="lead">
+      An <b>AI native command layer</b> designed to sit above enterprise execution.
+      CommandAI.ai coordinates decisions, intent, and action across systems, teams, and autonomous workflows.
+    </p>
+
+    <div class="ctaStack">
+      <div class="cta primary">
+        <span>Strategic inquiries</span><span>→</span>
+      </div>
+      <div class="cta">
+        <span>Enterprise use cases</span><span>→</span>
+      </div>
+      <div class="cta">
+        <span>Platform positioning</span><span>→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<aside class="side">
+
+<div class="card" id="solution">
+  <h3>The Solution</h3>
+  <p>
+    CommandAI.ai is positioned as an AI native command and control layer that coordinates signals into execution ready decisions.
+  </p>
+  <ul class="bullets">
+    <li>Synthesize operational signals into unified command context</li>
+    <li>Coordinate action across systems, teams, and agents</li>
+    <li>Enforce priority, intent, and governance at scale</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Enterprise Use Cases</h3>
+  <ul class="bullets">
+    <li>Executive and operational command centers</li>
+    <li>Autonomous system supervision and override</li>
+    <li>Crisis response and escalation control</li>
+    <li>Multi system orchestration at scale</li>
+  </ul>
+</div>
+
+</aside>
+
+</main>
+
+<section class="sectionGrid" id="problem">
+  <div class="sectionCard">
+    <h4>The Enterprise Problem</h4>
+    <p>
+      Enterprise execution is fragmented across dashboards, workflows, and operators.
+      Signals exist everywhere. Command exists nowhere.
+    </p>
+  </div>
+
+  <div class="sectionCard" id="positioning">
+    <h4>Platform Positioning</h4>
+    <p>
+      CommandAI.ai is not a tool, dashboard, or productivity layer.
+      It is the command surface above execution where decisions become controlled outcomes.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div>© <span id="y"></span> CommandAI.ai</div>
+  <div>Privately owned. Strategic discussions by inquiry only.</div>
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
