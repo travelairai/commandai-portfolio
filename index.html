@@ -3,235 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CommandAI.ai — Command and Control Intelligence for AI Systems</title>
-  <meta name="description" content="CommandAI.ai is the command and control intelligence layer governing decision-making, orchestration, and escalation across AI systems. Privately owned. Strategic discussions by inquiry only.">
+  <title>CommandAI.ai — Command & Control Intelligence for AI Systems</title>
+
   <style>
+    :root {
+      --bg: #071c24;
+      --bg-soft: #0c2b36;
+      --text: #eaf4f7;
+      --muted: #b6cbd3;
+      --accent: #16c1a3;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 20% 0%, #0f2a33, #071a20);
-      color: #e6f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #0f3a45, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
     }
+
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 80px 24px 120px;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 80px;
+      margin-bottom: 72px;
     }
+
     header h1 {
       font-size: 20px;
       font-weight: 600;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
     }
+
     nav a {
-      color: #9fbec6;
+      color: var(--muted);
       text-decoration: none;
       margin-left: 28px;
       font-size: 14px;
     }
-    .pill-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-    .pill {
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 8px 14px;
-      border-radius: 999px;
+
+    nav a:hover { color: var(--text); }
+
+    .eyebrow {
       font-size: 12px;
-      color: #b6d6dc;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
-    h2 {
-      font-size: 56px;
-      line-height: 1.05;
-      margin: 0 0 28px;
-      letter-spacing: -0.8px;
+
+    .hero h2 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.15;
+      margin: 0 0 24px;
+      font-weight: 700;
     }
-    .subhead {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 780px;
-      color: #cfe6eb;
-      margin-bottom: 28px;
+
+    .hero p {
+      max-width: 760px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 36px;
     }
-    .subhead-secondary {
-      font-size: 17px;
-      line-height: 1.6;
-      max-width: 780px;
-      color: #a8c8cf;
-      margin-bottom: 44px;
-    }
-    .cta-row {
-      display: flex;
+
+    .cta {
+      display: inline-flex;
       gap: 16px;
-      margin-bottom: 80px;
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #2bd4c7, #1fbfb3);
-      color: #041417;
+
+    .btn {
       padding: 14px 22px;
-      border-radius: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #02231f;
+      border-color: transparent;
       font-weight: 600;
-      text-decoration: none;
-      font-size: 15px;
     }
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.25);
-      color: #e6f4f6;
-      padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 15px;
+
+    section {
+      margin-top: 96px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      margin-bottom: 100px;
     }
+
     .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
+      background: linear-gradient(180deg, var(--bg-soft), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 14px;
       padding: 28px;
     }
+
     .card h3 {
-      margin: 0 0 10px;
+      margin-top: 0;
       font-size: 18px;
-      color: #e9fbff;
+      margin-bottom: 12px;
     }
+
     .card p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #b8d6dc;
-    }
-    form {
-      max-width: 520px;
-      margin-top: 24px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(0,0,0,0.3);
-      color: #e6f4f6;
+      color: var(--muted);
       font-size: 15px;
     }
-    textarea {
-      min-height: 120px;
-    }
-    button {
-      background: linear-gradient(135deg, #2bd4c7, #1fbfb3);
-      border: none;
-      padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 15px;
-      color: #041417;
-    }
+
     footer {
-      margin-top: 140px;
-      font-size: 13px;
-      color: #7fa1a8;
+      margin-top: 120px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
+
     <header>
       <h1>CommandAI.ai</h1>
       <nav>
         <a href="#positioning">Positioning</a>
-        <a href="#strategic-fit">Strategic Fit</a>
+        <a href="#fit">Strategic Fit</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <div class="pill-row">
-      <div class="pill">Command intelligence</div>
-      <div class="pill">Control & governance</div>
-      <div class="pill">Enterprise infrastructure</div>
-      <div class="pill">Private asset</div>
-    </div>
+    <section class="hero" id="positioning">
+      <div class="eyebrow">Privately owned · Strategic discussions by inquiry only</div>
 
-    <h2>Command and control intelligence for AI systems</h2>
+      <h2>Command and control intelligence<br/>for AI systems</h2>
 
-    <p class="subhead">
-      CommandAI.ai is positioned as the authority layer governing decision-making,
-      constraints, and escalation across AI systems — providing centralized command,
-      orchestration, and control as autonomy scales beyond human oversight.
-    </p>
-
-    <p class="subhead-secondary">
-      As AI systems transition from tools to operators, the command layer becomes unavoidable.
-      Control, intent, and governance determine whether intelligence compounds safely
-      or fragments operationally at scale.
-    </p>
-
-    <div class="cta-row">
-      <a href="#contact" class="btn-primary">Request a private discussion</a>
-      <a href="#strategic-fit" class="btn-secondary">View strategic fit</a>
-    </div>
-
-    <div class="grid" id="strategic-fit">
-      <div class="card">
-        <h3>What this brand represents</h3>
-        <p>
-          Authority, control, and decision governance.
-          CommandAI.ai signals enterprise-grade command infrastructure — built for
-          organizations operating beyond manual oversight.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Where it sits in the stack</h3>
-        <p>
-          Above execution layers and autonomous agents —
-          defining intent, constraints, escalation paths,
-          and system-wide coordination.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Why this layer becomes inevitable</h3>
-        <p>
-          As autonomy increases, unmanaged intelligence becomes risk.
-          Command layers become the long-term control surface
-          for safety, reliability, and enterprise trust.
-        </p>
-      </div>
-    </div>
-
-    <div id="contact">
-      <h3>Private inquiries only</h3>
-      <p class="subhead-secondary">
-        CommandAI.ai is privately owned.
-        Strategic discussions only.
+      <p>
+        CommandAI.ai is positioned as the authority layer governing decision-making,
+        constraints, and escalation across AI systems — providing centralized command
+        and control as autonomy scales beyond direct human oversight.
       </p>
 
-      <form action="https://formspree.io/f/xnjjngql" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="Context for inquiry"></textarea>
-        <button type="submit">Submit inquiry</button>
-      </form>
-    </div>
+      <p>
+        As AI systems transition from tools to operators, command layers become unavoidable.
+        Control, intent, and governance determine whether intelligence compounds safely —
+        or fragments at scale.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#contact">Request a private discussion</a>
+        <a class="btn" href="#fit">View strategic fit</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid">
+        <div class="card">
+          <h3>What this asset represents</h3>
+          <p>
+            CommandAI signals authority. It is not a product layer.
+            It is the control surface that defines how intelligent systems behave
+            when autonomy becomes operationally real.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Where it sits in the stack</h3>
+          <p>
+            Above execution layers and physical AI.
+            Defining intent, constraints, escalation, and governance
+            across distributed agents and autonomous systems.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Why command layers matter</h3>
+          <p>
+            As intelligence scales, coordination becomes the bottleneck.
+            Ownership of the command layer determines safety, reliability,
+            and long-term system control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit">
+      <div class="grid">
+        <div class="card">
+          <h3>Strategic buyers</h3>
+          <p>
+            Defense and aerospace contractors, autonomous systems companies,
+            robotics platforms, AI infrastructure providers,
+            and enterprise governance vendors.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Why this name</h3>
+          <p>
+            “Command” is universal, permanent, and non-trend-dependent.
+            It maps cleanly to authority, control, and decision ownership —
+            not features or interfaces.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Acquisition posture</h3>
+          <p>
+            Built as a standalone strategic asset.
+            No operational commitments.
+            Positioned for acquisition, licensing, or long-term hold.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h3>Private inquiry</h3>
+        <p>
+          CommandAI.ai is privately held.
+          Strategic discussions only.
+        </p>
+
+        <form action="https://formspree.io/f/xnjjngql" method="POST">
+          <input type="text" name="name" placeholder="Name" required
+            style="width:100%;padding:12px;margin-top:16px;border-radius:6px;border:none;" />
+          <input type="email" name="email" placeholder="Email" required
+            style="width:100%;padding:12px;margin-top:12px;border-radius:6px;border:none;" />
+          <textarea name="message" placeholder="Inquiry"
+            style="width:100%;padding:12px;margin-top:12px;border-radius:6px;border:none;min-height:120px;"></textarea>
+          <button type="submit" class="btn primary" style="margin-top:16px;">Submit inquiry</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
-      © CommandAI.ai — Privately owned · Strategic discussions by inquiry only
+      <div>© CommandAI.ai</div>
+      <div>Private asset · No public offering</div>
     </footer>
-  </div>
 
+  </div>
 </body>
 </html>
