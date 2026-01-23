@@ -4,388 +4,179 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-  <meta name="theme-color" content="#0A1830" />
-  <meta name="description" content="CommandAI.ai — Enterprise Command and Control Intelligence. An AI-native command layer above execution, coordinating decisions into controlled outcomes." />
+  <meta name="theme-color" content="#0B1118" />
+  <meta name="description" content="CommandAI.ai — Enterprise Command and Control Intelligence. An AI-native command layer that coordinates intent, priority, and action across systems, teams, and autonomous workflows." />
   <title>CommandAI.ai — Enterprise Command and Control Intelligence</title>
 
   <style>
-    /* --- hard reset to avoid browser default “plain page” look --- */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; }
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-
-    :root{
-      /* TravelAir-adjacent blue authority palette */
-      --bg0:#050B16;
-      --bg1:#081C35;
-      --bg2:#0B2B55;
-
-      --ink:#EEF4FF;
-      --muted:rgba(238,244,255,.78);
-      --muted2:rgba(238,244,255,.60);
-
-      --glass:rgba(255,255,255,.07);
-      --glass2:rgba(255,255,255,.05);
-      --stroke:rgba(255,255,255,.14);
-      --stroke2:rgba(255,255,255,.10);
-
-      --blue:#6FB6FF;
-      --blue2:#3B7CFF;
-      --teal:#46E3C4;
-
-      --shadow: 0 18px 55px rgba(0,0,0,.38);
-      --shadow2: 0 12px 36px rgba(0,0,0,.30);
-
-      --r-xl:26px;
-      --r-lg:18px;
-      --r-md:14px;
-
-      --max:1140px;
-    }
-
-    body{
-      color: var(--ink);
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: #F2F6FF;
       background:
-        radial-gradient(900px 520px at 16% 10%, rgba(111,182,255,.22), transparent 60%),
-        radial-gradient(760px 500px at 80% 22%, rgba(70,227,196,.14), transparent 62%),
-        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg2));
-      overflow-x:hidden;
+        radial-gradient(800px 480px at 18% 12%, rgba(90,160,190,.18), transparent 60%),
+        radial-gradient(700px 520px at 78% 82%, rgba(120,160,200,.12), transparent 60%),
+        linear-gradient(180deg, #070B11, #0B1118 45%, #0F1824);
+      overflow-x: hidden;
     }
 
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ opacity:.95; }
+    a { color: inherit; text-decoration: none; }
 
-    .wrap{
-      width: min(var(--max), calc(100% - 40px));
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 34px 0 84px;
+      padding: 36px 0 88px;
     }
 
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom: 18px;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width: 260px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    .logo{
-      width:46px;height:46px;border-radius:15px;
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(111,182,255,.72) 42%, transparent 62%),
-        radial-gradient(circle at 70% 70%, rgba(70,227,196,.62), transparent 62%),
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(120,180,210,.65) 42%, transparent 62%),
         rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:0 10px 26px rgba(0,0,0,.30);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 26px rgba(0,0,0,.32);
     }
 
-    .brand .name{ margin:0; font-size:18px; letter-spacing:.2px; }
-    .brand .tag{ margin:3px 0 0; font-size:13px; color: var(--muted2); }
-
-    nav{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .2px;
     }
-    nav a{
-      font-size:13.5px;
-      color: rgba(238,244,255,.82);
+
+    .brand p {
+      margin: 3px 0 0;
+      font-size: 13px;
+      color: rgba(242,246,255,.6);
+    }
+
+    nav a {
+      font-size: 13.5px;
       padding: 8px 10px;
       border-radius: 10px;
-    }
-    nav a:hover{
-      background: rgba(255,255,255,.06);
-      color:#fff;
+      color: rgba(242,246,255,.8);
     }
 
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:999px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: var(--shadow2);
-      margin: 14px 0 18px;
-    }
-    .pill .dot{
-      width:10px;height:10px;border-radius:999px;
-      background: linear-gradient(135deg, var(--blue), var(--teal));
-      box-shadow: 0 0 0 6px rgba(111,182,255,.14);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 18px;
-      align-items:start;
-    }
-
-    .panel{
-      background: var(--glass);
-      border: 1px solid var(--stroke);
-      border-radius: var(--r-xl);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .hero{
-      padding:22px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(520px 330px at 18% 14%, rgba(111,182,255,.22), transparent 60%),
-        radial-gradient(520px 360px at 74% 38%, rgba(70,227,196,.16), transparent 60%);
-      pointer-events:none;
-    }
-
-    .heroInner{ position:relative; }
-
-    .chips{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-bottom: 14px;
-    }
-    .chip{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--stroke2);
-      background: rgba(255,255,255,.06);
-      color: rgba(238,244,255,.86);
-    }
-
-    .title{
-      margin:0;
-      font-size:46px;
-      line-height:1.03;
-      letter-spacing:-.8px;
-    }
-
-    .lead{
-      margin:14px 0 0;
-      font-size:15.6px;
-      line-height:1.55;
-      color: var(--muted);
-      max-width: 62ch;
-    }
-    .lead b{ color:#fff; }
-
-    .ctaStack{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      margin-top:18px;
-      width: min(460px, 100%);
-    }
-
-    .cta{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      font-weight: 650;
-      color:#fff;
-      cursor:pointer;
-      user-select:none;
-    }
-    .cta.primary{
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      box-shadow: 0 18px 40px rgba(59,124,255,.30);
-      border-color: rgba(255,255,255,.18);
-    }
-    .cta:hover{ transform: translateY(-1px); transition: 160ms ease; }
-
-    .side{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    .card{
-      padding:18px;
-      border-radius: var(--r-xl);
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: var(--shadow2);
-    }
-
-    .kicker{
-      margin:0 0 10px;
-      font-size:12px;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      color: var(--muted);
-    }
-
-    .card p{
-      margin:0;
-      color:#fff;
-      font-size:14.2px;
-      line-height:1.55;
-    }
-
-    .bullets{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .bullets li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      padding:10px 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      font-size:13.4px;
-      color: rgba(238,244,255,.92);
-    }
-
-    .bullets li::before{
-      content:"";
-      width:8px;height:8px;border-radius:999px;
-      margin-top:6px;
-      background: var(--blue);
-      box-shadow: 0 0 0 6px rgba(111,182,255,.14);
-      flex: 0 0 auto;
-    }
-
-    section{ margin-top: 22px; }
-
-    .sectionGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-    }
-
-    .sectionCard{
-      padding:18px;
-      border-radius: var(--r-xl);
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: var(--shadow2);
-    }
-
-    .sectionCard p{
-      margin:0;
-      color:#fff;
-      font-size:14.2px;
-      line-height:1.55;
-    }
-
-    .form{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top: 12px;
-    }
-
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-
-    label{
-      font-size:12px;
-      color: var(--muted);
-      letter-spacing:.02em;
-    }
-
-    input, textarea{
-      width:100%;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
+    nav a:hover {
       background: rgba(255,255,255,.06);
       color: #fff;
-      padding: 12px 12px;
-      outline: none;
-      font: inherit;
     }
 
-    textarea{
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    input:focus, textarea:focus{
-      border-color: rgba(111,182,255,.55);
-      box-shadow: 0 0 0 6px rgba(111,182,255,.12);
-    }
-
-    .formWide{ grid-column: 1 / -1; }
-
-    .submitRow{
-      grid-column: 1 / -1;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      margin-top: 2px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      border: 0;
-      border-radius: 14px;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       padding: 12px 14px;
-      font-weight: 700;
-      color:#fff;
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      box-shadow: 0 18px 40px rgba(59,124,255,.30);
-      cursor:pointer;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      margin: 14px 0 18px;
     }
 
-    .note{
-      font-size:12.5px;
-      color: var(--muted2);
+    .pill .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #6FA7C5;
+      box-shadow: 0 0 0 6px rgba(111,167,197,.18);
     }
 
-    footer{
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 26px;
+      padding: 22px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 55px rgba(0,0,0,.42);
+    }
+
+    .title {
+      margin: 0;
+      font-size: 46px;
+      line-height: 1.03;
+      letter-spacing: -.8px;
+    }
+
+    .lead {
+      margin-top: 14px;
+      font-size: 15.6px;
+      line-height: 1.55;
+      color: rgba(242,246,255,.78);
+      max-width: 60ch;
+    }
+
+    .cta {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #6FA7C5, #4F7FA3);
+      font-weight: 800;
+      color: #0B1118;
+      display: inline-block;
+      box-shadow: 0 18px 40px rgba(111,167,197,.32);
+    }
+
+    .card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 26px;
+      padding: 18px;
+      backdrop-filter: blur(16px);
+    }
+
+    .kicker {
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(242,246,255,.6);
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .card p {
+      font-size: 14.2px;
+      line-height: 1.55;
+    }
+
+    section {
+      margin-top: 22px;
+    }
+
+    footer {
       margin-top: 26px;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:12px;
-      font-size:12.5px;
-      color: var(--muted2);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12.5px;
+      color: rgba(242,246,255,.6);
     }
 
-    /* small screens */
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: 1fr; }
-      .sectionGrid{ grid-template-columns: 1fr; }
-      .title{ font-size: 42px; }
-      nav{ justify-content:flex-start; }
-    }
-
-    @media (max-width: 620px){
-      .title{ font-size: 38px; }
-      .form{ grid-template-columns: 1fr; }
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      .title { font-size: 40px; }
     }
   </style>
 </head>
@@ -395,166 +186,107 @@
 
     <header>
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <div class="logo"></div>
         <div>
-          <p class="name" style="margin:0;font-size:18px;font-weight:800;letter-spacing:.2px;">CommandAI.ai</p>
-          <p class="tag">Enterprise Command and Control Intelligence</p>
+          <h1>CommandAI.ai</h1>
+          <p>Enterprise Command and Control Intelligence</p>
         </div>
       </div>
-
       <nav>
-        <a href="#problem">Enterprise Problem</a>
+        <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
-        <a href="#positioning">Platform Positioning</a>
+        <a href="#positioning">Positioning</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <div class="pill">
-      <div class="dot" aria-hidden="true"></div>
-      <span><b>Command infrastructure</b> above execution</span>
+      <div class="dot"></div>
+      <span>Infrastructure above execution</span>
     </div>
 
     <main class="grid">
-
-      <section class="panel hero">
-        <div class="heroInner">
-          <div class="chips">
-            <span class="chip">Command infrastructure</span>
-            <span class="chip">AI native orchestration</span>
-            <span class="chip">Private strategic asset</span>
-          </div>
-
-          <h1 class="title">Enterprise Command and Control Intelligence</h1>
-
-          <p class="lead">
-            An <b>AI native command layer</b> designed to sit above execution.
-            CommandAI.ai coordinates decisions, intent, and action across systems, teams, and autonomous workflows.
-          </p>
-
-          <div class="ctaStack">
-            <div class="cta primary" data-scroll="#contact">
-              <span>Strategic inquiries</span><span>→</span>
-            </div>
-            <div class="cta" data-scroll="#usecases">
-              <span>Enterprise use cases</span><span>→</span>
-            </div>
-            <div class="cta" data-scroll="#positioning">
-              <span>Platform positioning</span><span>→</span>
-            </div>
-          </div>
-        </div>
+      <section class="panel">
+        <h2 class="title">Enterprise Command and Control Intelligence</h2>
+        <p class="lead">
+          CommandAI.ai is an <strong>AI-native command layer</strong> that coordinates intent, priority, and action across systems, teams, and autonomous workflows.
+          It sits above execution environments to ensure decisions translate into aligned outcomes.
+        </p>
+        <a href="#contact" class="cta">Strategic inquiries</a>
       </section>
 
-      <aside class="side">
-
-        <div class="card" id="solution">
-          <p class="kicker">The Solution</p>
-          <p>
-            CommandAI.ai is positioned as an AI native command and control layer that coordinates signals into execution ready decisions.
-          </p>
-          <ul class="bullets">
-            <li>Synthesize operational signals into unified command context</li>
-            <li>Coordinate action across systems, teams, and agents</li>
-            <li>Enforce priority, intent, and governance at scale</li>
-          </ul>
-        </div>
-
-        <div class="card" id="usecases">
-          <p class="kicker">Enterprise Use Cases</p>
-          <ul class="bullets">
-            <li>Executive and operational command centers</li>
-            <li>Autonomous system supervision and override</li>
-            <li>Crisis response and escalation control</li>
-            <li>Multi system orchestration at scale</li>
-          </ul>
-        </div>
-
+      <aside class="card">
+        <div class="kicker">The Problem</div>
+        <p>
+          As enterprises scale automation and autonomy, execution fragments.
+          Signals multiply, ownership blurs, escalation weakens, and alignment erodes.
+          Speed increases while control disappears.
+        </p>
       </aside>
-
     </main>
 
-    <section class="sectionGrid">
-      <div class="sectionCard" id="problem">
-        <p class="kicker">The Enterprise Problem</p>
+    <section id="solution" class="grid">
+      <div class="card">
+        <div class="kicker">The Solution</div>
         <p>
-          Execution is fragmented across dashboards, workflows, and operators.
-          Signals exist everywhere. Command exists nowhere.
+          CommandAI centralizes command without centralizing execution.
+          It synchronizes signals, priorities, and authority into a coherent control surface that preserves intent at scale.
         </p>
       </div>
 
-      <div class="sectionCard" id="positioning">
-        <p class="kicker">Platform Positioning</p>
+      <div class="card">
+        <div class="kicker">Where It Sits</div>
         <p>
-          CommandAI.ai is not a tool, dashboard, or productivity layer.
-          It is the command surface above execution where decisions become controlled outcomes.
+          Above execution systems and autonomous agents.
+          Below governance and strategic oversight.
+          CommandAI is the layer where intent becomes enforceable action.
         </p>
       </div>
     </section>
 
-    <section class="sectionGrid">
-      <div class="sectionCard" id="contact">
-        <p class="kicker">Contact</p>
+    <section id="positioning" class="grid">
+      <div class="card">
+        <div class="kicker">What This Brand Signals</div>
         <p>
-          Privately owned. Strategic discussions by inquiry only.
-        </p>
-
-        <form class="form" action="https://formspree.io/f/xnjjngql" method="POST">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Your name" required />
-          </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" required />
-          </div>
-
-          <div class="field formWide">
-            <label for="company">Company</label>
-            <input id="company" name="company" placeholder="Company / organization" />
-          </div>
-
-          <div class="field formWide">
-            <label for="message">Inquiry</label>
-            <textarea id="message" name="message" placeholder="What are you exploring and what does ‘command’ mean in your stack?" required></textarea>
-          </div>
-
-          <input type="hidden" name="_subject" value="CommandAI.ai — Strategic Inquiry" />
-
-          <div class="submitRow">
-            <button class="btn" type="submit">Send inquiry</button>
-            <span class="note">No demos. No decks. Just signal.</span>
-          </div>
-        </form>
-      </div>
-
-      <div class="sectionCard">
-        <p class="kicker">Acquisition posture</p>
-        <p>
-          Built as a category grade asset for enterprise buyers who understand that autonomous execution requires centralized intent,
-          constraint, and override.
+          Authority. Control. Accountability.
+          CommandAI reads as infrastructure, not tooling.
+          A platform name. A control layer. A strategic asset.
         </p>
       </div>
+
+      <div class="card">
+        <div class="kicker">Strategic Positioning</div>
+        <p>
+          CommandAI.ai is privately owned and positioned as an acquisition-grade domain asset.
+          Strategic acquisition discussions by inquiry only.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <div class="kicker">Contact</div>
+      <p>
+        Strategic inquiries only. This asset is evaluated based on fit, not volume.
+      </p>
+
+      <form action="https://formspree.io/f/xnjjngql" method="POST">
+        <input type="hidden" name="_subject" value="CommandAI.ai — Strategic Inquiry" />
+        <input name="name" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Inquiry"></textarea>
+        <button type="submit" class="cta">Send inquiry</button>
+      </form>
     </section>
 
     <footer>
       <div>© <span id="y"></span> CommandAI.ai</div>
-      <div>Private asset. Enterprise positioning only.</div>
+      <div>Privately held. Strategic asset.</div>
     </footer>
 
   </div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Smooth scroll for CTA blocks
-    document.querySelectorAll("[data-scroll]").forEach(el => {
-      el.addEventListener("click", () => {
-        const target = document.querySelector(el.getAttribute("data-scroll"));
-        if(target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
   </script>
 </body>
 </html>
